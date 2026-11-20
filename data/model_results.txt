@@ -1,0 +1,181 @@
+Step 8 models. Units: 4425 ({'superstar': 1905, 'starter': 1563, 'role': 957}), players: 377.
+Hedges removed from I: 22967 of 111107 I words (20.7%).
+Teammate names: 9281, team words: 10320; units with a roster: 99.9%.
+Questions: teammate names 8085, team words 2356.
+Game days, pooled we-share by result: lost 0.575, won 0.483
+Raw medians by tier:
+           we_share  i_rate  we_rate
+tier                                
+role          0.528  33.569   38.917
+starter       0.542  36.199   41.190
+superstar     0.527  37.789   41.139
+
+--- A we-share | 1 Tier only | units 4420, players 377
+  role         0.494 [0.471, 0.518]
+  starter      0.500 [0.481, 0.519]   vs role +0.006 [-0.024, +0.036]   OR 1.02 [0.91, 1.15]  p=0.702
+  superstar    0.488 [0.451, 0.524]   vs role -0.007 [-0.050, +0.037]   OR 0.97 [0.82, 1.16]  p=0.769
+
+--- A we-share | 2 + game and round | units 4420, players 377
+  role         0.504 [0.480, 0.527]
+  starter      0.500 [0.482, 0.518]   vs role -0.003 [-0.032, +0.025]   OR 0.99 [0.88, 1.11]  p=0.827
+  superstar    0.494 [0.460, 0.528]   vs role -0.010 [-0.050, +0.030]   OR 0.96 [0.82, 1.13]  p=0.631
+
+--- A we-share | 3 + question 'you' rate | units 4420, players 377
+  role         0.503 [0.482, 0.525]
+  starter      0.502 [0.484, 0.520]   vs role -0.002 [-0.028, +0.025]   OR 0.99 [0.89, 1.11]  p=0.902
+  superstar    0.501 [0.471, 0.532]   vs role -0.002 [-0.039, +0.035]   OR 0.99 [0.85, 1.16]  p=0.920
+
+--- A we-share | 4 + question topics | units 4420, players 377
+  role         0.511 [0.492, 0.530]
+  starter      0.507 [0.491, 0.524]   vs role -0.004 [-0.028, +0.021]   OR 0.98 [0.89, 1.09]  p=0.769
+  superstar    0.507 [0.478, 0.536]   vs role -0.004 [-0.039, +0.030]   OR 0.98 [0.85, 1.14]  p=0.818
+  controls (log-odds, clustered SE):
+    q_you_rate  -0.0133  [-0.0150, -0.0115]  p=0.000
+    game_day    +0.2065  [-0.0405, +0.4535]  p=0.101
+    won_gd      -0.2485  [-0.3416, -0.1555]  p=0.000
+    pts_gd      -0.0086  [-0.0150, -0.0022]  p=0.009
+    min_gd      +0.0037  [-0.0037, +0.0112]  p=0.324
+    r_conf      +0.1536  [+0.0771, +0.2302]  p=0.000
+    r_semis     +0.0168  [-0.2080, +0.2415]  p=0.884
+    r_first     +0.0855  [-0.0698, +0.2407]  p=0.281
+
+--- B same player (FE) | 4 + question topics | units 4410, players 368
+  role         0.510 [0.475, 0.545]
+  starter      0.511 [0.498, 0.524]   vs role +0.001 [-0.041, +0.043]   OR 1.00 [0.84, 1.20]  p=0.958
+  superstar    0.513 [0.498, 0.528]   vs role +0.003 [-0.045, +0.051]   OR 1.01 [0.82, 1.25]  p=0.907
+  players who change tier: 86, their units: 2231
+
+--- C I rate | 1 Tier only | units 4425, players 377
+  role        39.164 [36.377, 41.952]
+  starter     41.069 [39.029, 43.109]   vs role +1.905 [-1.416, +5.226]   RR 1.05 [0.96, 1.14]  p=0.265
+  superstar   41.921 [36.411, 47.431]   vs role +2.757 [-3.411, +8.925]   RR 1.07 [0.92, 1.24]  p=0.372
+
+--- C I rate | 3 + question 'you' rate | units 4425, players 377
+  role        39.517 [36.932, 42.103]
+  starter     41.775 [39.844, 43.705]   vs role +2.257 [-0.886, +5.400]   RR 1.06 [0.98, 1.14]  p=0.163
+  superstar   40.785 [36.212, 45.359]   vs role +1.268 [-4.015, +6.551]   RR 1.03 [0.91, 1.18]  p=0.635
+
+--- C I rate | 4 + question topics | units 4425, players 377
+  role        38.932 [36.440, 41.423]
+  starter     41.341 [39.483, 43.199]   vs role +2.409 [-0.626, +5.444]   RR 1.06 [0.98, 1.15]  p=0.124
+  superstar   40.282 [35.817, 44.747]   vs role +1.350 [-3.818, +6.517]   RR 1.03 [0.91, 1.18]  p=0.606
+
+--- C we rate | 1 Tier only | units 4425, players 377
+  role        38.258 [35.756, 40.759]
+  starter     41.061 [39.124, 42.998]   vs role +2.803 [-0.321, +5.927]   RR 1.07 [0.99, 1.16]  p=0.082
+  superstar   39.892 [37.435, 42.349]   vs role +1.634 [-1.875, +5.143]   RR 1.04 [0.95, 1.14]  p=0.362
+
+--- C we rate | 3 + question 'you' rate | units 4425, players 377
+  role        39.635 [37.339, 41.931]
+  starter     41.474 [39.701, 43.246]   vs role +1.838 [-1.003, +4.680]   RR 1.05 [0.98, 1.12]  p=0.208
+  superstar   40.423 [38.134, 42.712]   vs role +0.788 [-2.521, +4.098]   RR 1.02 [0.94, 1.11]  p=0.641
+
+--- C we rate | 4 + question topics | units 4425, players 377
+  role        40.417 [38.304, 42.530]
+  starter     42.060 [40.366, 43.754]   vs role +1.643 [-0.997, +4.284]   RR 1.04 [0.98, 1.11]  p=0.225
+  superstar   40.941 [38.828, 43.055]   vs role +0.524 [-2.530, +3.578]   RR 1.01 [0.94, 1.09]  p=0.736
+
+--- S1 we-share, hedges removed | 1 Tier only | units 4419, players 377
+  role         0.556 [0.530, 0.581]
+  starter      0.563 [0.542, 0.584]   vs role +0.007 [-0.025, +0.039]   OR 1.03 [0.90, 1.17]  p=0.670
+  superstar    0.541 [0.498, 0.584]   vs role -0.015 [-0.065, +0.035]   OR 0.94 [0.77, 1.15]  p=0.562
+
+--- S1 I rate, hedges removed | 1 Tier only | units 4425, players 377
+  role        30.567 [28.020, 33.115]
+  starter     31.886 [29.925, 33.848]   vs role +1.319 [-1.763, +4.401]   RR 1.04 [0.94, 1.15]  p=0.405
+  superstar   33.837 [28.554, 39.121]   vs role +3.270 [-2.586, +9.126]   RR 1.11 [0.93, 1.32]  p=0.260
+
+--- S1 we-share, hedges removed | 3 + question 'you' rate | units 4419, players 377
+  role         0.566 [0.544, 0.589]
+  starter      0.565 [0.546, 0.584]   vs role -0.001 [-0.030, +0.028]   OR 1.00 [0.88, 1.12]  p=0.939
+  superstar    0.559 [0.524, 0.595]   vs role -0.007 [-0.049, +0.034]   OR 0.97 [0.81, 1.16]  p=0.730
+
+--- S1 I rate, hedges removed | 3 + question 'you' rate | units 4425, players 377
+  role        30.913 [28.584, 33.241]
+  starter     32.631 [30.802, 34.461]   vs role +1.719 [-1.161, +4.598]   RR 1.06 [0.96, 1.16]  p=0.246
+  superstar   32.664 [28.295, 37.032]   vs role +1.751 [-3.196, +6.699]   RR 1.06 [0.91, 1.23]  p=0.481
+
+--- S1 we-share, hedges removed | 4 + question topics | units 4419, players 377
+  role         0.574 [0.554, 0.595]
+  starter      0.571 [0.554, 0.589]   vs role -0.003 [-0.029, +0.023]   OR 0.99 [0.88, 1.11]  p=0.825
+  superstar    0.565 [0.532, 0.599]   vs role -0.009 [-0.048, +0.030]   OR 0.96 [0.81, 1.14]  p=0.649
+
+--- S1 I rate, hedges removed | 4 + question topics | units 4425, players 377
+  role        30.378 [28.139, 32.617]
+  starter     32.204 [30.460, 33.947]   vs role +1.826 [-0.925, +4.576]   RR 1.06 [0.97, 1.16]  p=0.197
+  superstar   32.132 [27.911, 36.354]   vs role +1.754 [-3.028, +6.536]   RR 1.06 [0.91, 1.23]  p=0.465
+
+--- S2 teammate credit (total) | 1 Tier only | units 4422, players 375
+  role         7.822 [7.179, 8.464]
+  starter      7.597 [7.128, 8.065]   vs role -0.225 [-1.007, +0.557]   RR 0.97 [0.88, 1.07]  p=0.571
+  superstar    6.887 [6.123, 7.651]   vs role -0.934 [-1.949, +0.080]   RR 0.88 [0.77, 1.01]  p=0.075
+
+--- S2 teammate credit (total) | 3 + question 'you' rate | units 4422, players 375
+  role         8.076 [7.378, 8.775]
+  starter      7.442 [7.003, 7.882]   vs role -0.634 [-1.427, +0.159]   RR 0.92 [0.83, 1.02]  p=0.111
+  superstar    6.581 [5.913, 7.248]   vs role -1.496 [-2.470, -0.521]   RR 0.81 [0.71, 0.93]  p=0.003
+
+--- S2 teammate credit (total) | 4 + question topics | units 4422, players 375
+  role         7.989 [7.304, 8.674]
+  starter      7.366 [6.924, 7.808]   vs role -0.623 [-1.405, +0.159]   RR 0.92 [0.83, 1.02]  p=0.112
+  superstar    6.525 [5.858, 7.191]   vs role -1.465 [-2.430, -0.499]   RR 0.82 [0.71, 0.93]  p=0.003
+
+--- S2 teammate credit (total) | 5 + question names a teammate | units 4422, players 375
+  role         7.901 [7.252, 8.550]
+  starter      7.382 [6.946, 7.817]   vs role -0.519 [-1.269, +0.230]   RR 0.93 [0.85, 1.03]  p=0.169
+  superstar    6.566 [5.913, 7.220]   vs role -1.335 [-2.269, -0.400]   RR 0.83 [0.73, 0.95]  p=0.006
+
+--- S2 teammate credit (total) | 6 same player (FE) | units 4399, players 357
+  role         6.531 [5.681, 7.381]
+  starter      7.316 [6.933, 7.698]   vs role +0.784 [-0.299, +1.868]   RR 1.12 [0.95, 1.32]  p=0.168
+  superstar    7.500 [6.981, 8.020]   vs role +0.969 [-0.340, +2.279]   RR 1.15 [0.95, 1.39]  p=0.156
+
+--- S2 teammate names | 1 Tier only | units 4422, players 375
+  role         3.703 [3.208, 4.198]
+  starter      3.391 [2.955, 3.827]   vs role -0.312 [-0.965, +0.342]   RR 0.92 [0.76, 1.10]  p=0.348
+  superstar    3.387 [2.912, 3.861]   vs role -0.316 [-1.012, +0.379]   RR 0.91 [0.75, 1.11]  p=0.373
+
+--- S2 teammate names | 3 + question 'you' rate | units 4422, players 375
+  role         3.890 [3.368, 4.411]
+  starter      3.267 [2.899, 3.634]   vs role -0.623 [-1.264, +0.018]   RR 0.84 [0.70, 1.00]  p=0.052
+  superstar    3.161 [2.751, 3.571]   vs role -0.729 [-1.424, -0.034]   RR 0.81 [0.67, 0.99]  p=0.038
+
+--- S2 teammate names | 4 + question topics | units 4422, players 375
+  role         3.894 [3.372, 4.416]
+  starter      3.270 [2.902, 3.638]   vs role -0.623 [-1.269, +0.022]   RR 0.84 [0.70, 1.00]  p=0.053
+  superstar    3.158 [2.748, 3.568]   vs role -0.735 [-1.431, -0.040]   RR 0.81 [0.67, 0.99]  p=0.036
+
+--- S2 teammate names | 5 + question names a teammate | units 4422, players 375
+  role         3.828 [3.335, 4.322]
+  starter      3.300 [2.964, 3.636]   vs role -0.528 [-1.130, +0.074]   RR 0.86 [0.73, 1.02]  p=0.079
+  superstar    3.215 [2.822, 3.608]   vs role -0.613 [-1.277, +0.050]   RR 0.84 [0.70, 1.01]  p=0.067
+
+--- S2 teammate names | 6 same player (FE) | units 4260, players 302
+  role         3.053 [2.400, 3.706]
+  starter      3.571 [3.234, 3.909]   vs role +0.518 [-0.299, +1.336]   RR 1.17 [0.90, 1.51]  p=0.233
+  superstar    3.572 [3.137, 4.008]   vs role +0.519 [-0.523, +1.561]   RR 1.17 [0.85, 1.61]  p=0.339
+
+--- S2 team words | 1 Tier only | units 4422, players 375
+  role         4.119 [3.681, 4.556]
+  starter      4.206 [3.786, 4.625]   vs role +0.087 [-0.492, +0.666]   RR 1.02 [0.89, 1.17]  p=0.768
+  superstar    3.500 [3.053, 3.948]   vs role -0.618 [-1.245, +0.009]   RR 0.85 [0.72, 1.00]  p=0.056
+
+--- S2 team words | 3 + question 'you' rate | units 4422, players 375
+  role         4.195 [3.724, 4.666]
+  starter      4.189 [3.782, 4.596]   vs role -0.006 [-0.579, +0.566]   RR 1.00 [0.87, 1.14]  p=0.983
+  superstar    3.416 [2.997, 3.834]   vs role -0.779 [-1.399, -0.159]   RR 0.81 [0.69, 0.96]  p=0.014
+
+--- S2 team words | 4 + question topics | units 4422, players 375
+  role         4.098 [3.657, 4.539]
+  starter      4.105 [3.717, 4.493]   vs role +0.007 [-0.535, +0.549]   RR 1.00 [0.88, 1.14]  p=0.979
+  superstar    3.365 [2.948, 3.783]   vs role -0.732 [-1.332, -0.132]   RR 0.82 [0.70, 0.97]  p=0.017
+
+--- S2 team words | 5 + question names a teammate | units 4422, players 375
+  role         4.087 [3.648, 4.526]
+  starter      4.105 [3.713, 4.496]   vs role +0.018 [-0.525, +0.561]   RR 1.00 [0.88, 1.15]  p=0.949
+  superstar    3.367 [2.950, 3.785]   vs role -0.719 [-1.318, -0.121]   RR 0.82 [0.70, 0.97]  p=0.019
+
+--- S2 team words | 6 same player (FE) | units 4368, players 344
+  role         3.603 [3.096, 4.110]
+  starter      3.861 [3.598, 4.125]   vs role +0.259 [-0.391, +0.908]   RR 1.07 [0.90, 1.28]  p=0.443
+  superstar    4.104 [3.733, 4.476]   vs role +0.502 [-0.317, +1.320]   RR 1.14 [0.92, 1.41]  p=0.236

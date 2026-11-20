@@ -1,0 +1,13 @@
+The 90 hand-coded "we" uses (Step 12) by BERT "we" cluster; matched 90 of 90
+
+referent  generic  other_group  team  All
+cluster                                  
+1               0            0     8    8
+2               0            2    10   12
+3               0            0    10   10
+4               0            0     8    8
+5               0            0     6    6
+6               2            3    17   22
+7               0            2    14   16
+8               1            0     7    8
+All             3            7    80   90

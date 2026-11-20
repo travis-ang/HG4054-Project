@@ -1,0 +1,94 @@
+Documents (units with questions): 4,425   vocabulary: 4,373 terms   median words kept per document: 58
+Name words removed (946), e.g.: aaron, abdul, ad, adam, adams, adebayo, adelman, adreian, adrian, aj, al, aldridge, alex, alexander, alfonzo, allan, allen, alonzo, alston, alvarado, alvin, amar, andersen, anderson, andre, andrei, andrew, andy, angeles, angelo, antetokounmpo, anthony, antic, antoine, antoni, antonio, anunoby, ariel, ariza, aron
+Removed as too common (in > 50% of documents): game, team
+Summary
+ K  npmi  diversity  stability
+ 5 0.108      0.616      0.860
+ 8 0.116      0.560      0.756
+10 0.118      0.516      0.718
+12 0.112      0.467      0.677
+15 0.112      0.448      0.673
+20 0.105      0.416      0.636
+
+
+K = 5: NPMI coherence 0.108  diversity 0.62  seed stability 0.86
+    1 (+0.05) night, tomorrow, play, indiscernible, feel, inaudible, defense, yesterday, better, film, expect, need
+    2 (+0.10) series, year, games, season, finals, playing, different, playoffs, feel, time, play, played
+    3 (+0.15) quarter, half, fourth, second, feel, shots, play, ball, fourth quarter, defense, point, shot
+    4 (+0.10) tonight, feel, quarter, win, series, games, play, fourth, points, big, home, free
+    5 (+0.14) finals, nba, time, years, feel, year, moment, season, people, championship, player, win
+
+K = 8: NPMI coherence 0.116  diversity 0.56  seed stability 0.76
+    1 (+0.24) free, shot, end, throw, throws, line, free throw, free throws, play, tough, defensive, head
+    2 (+0.12) year, finals, season, series, years, time, different, playing, conference, playoffs, point, ago
+    3 (+0.15) quarter, fourth, fourth quarter, half, second, play, point, shots, minutes, feel, second half, big
+    4 (+0.08) tonight, feel, quarter, points, play, series, games, room, win, big, coming, locker
+    5 (+0.13) finals, nba, time, years, feel, moment, player, career, people, win, championship, season
+    6 (+0.08) feel, finals, different, series, games, days, playoffs, playing, played, experience, time, years
+    7 (+0.06) night, tomorrow, play, inaudible, better, feel, playing, expect, need, yesterday, different, film
+    8 (+0.07) series, games, home, feel, win, night, defense, play, played, playing, playoffs, indiscernible
+
+K = 10: NPMI coherence 0.118  diversity 0.52  seed stability 0.72
+    1 (+0.23) free, end, shot, throw, throws, free throw, free throws, line, defensive, play, missed, offensive
+    2 (+0.12) year, finals, season, series, time, conference, playing, point, years, playoffs, different, feel
+    3 (+0.13) half, second, quarter, shots, second half, point, ball, feel, shot, play, time, big
+    4 (+0.09) tonight, feel, points, games, series, quarter, play, big, coming, win, shots, game tonight
+    5 (+0.13) finals, years, nba, time, moment, feel, championship, win, season, player, year, people
+    6 (+0.08) different, feel, series, played, games, days, time, long, better, feel different, finals, year
+    7 (+0.08) night, tomorrow, play, playing, better, feel, yesterday, today, need, film, defense, different
+    8 (+0.07) games, series, home, win, feel, night, defense, played, playing, play, playoffs, season
+    9 (+0.13) fourth, quarter, fourth quarter, series, inaudible, foul, trouble, win, feel, foul trouble, night, big
+   10 (+0.12) play, room, locker, locker room, went, feel, days, ball, happened, couple, end, coach
+
+K = 12: NPMI coherence 0.112  diversity 0.47  seed stability 0.68
+    1 (+0.18) indiscernible, night, free, throw, shot, free throw, line, away, end, throw line, went, took
+    2 (+0.06) series, year, ball, defense, need, night, different, shots, feel, change, level, offense
+    3 (+0.13) half, second, quarter, second half, shots, point, shot, big, play, minutes, hit, feel
+    4 (+0.09) tonight, feel, points, win, series, big, games, coming, quarter, play, game tonight, start
+    5 (+0.08) feel, season, feeling, play, time, day, career, moment, point, forward, coming, played
+    6 (+0.09) feel, different, series, days, games, year, ago, played, rest, years, feel different, couple
+    7 (+0.10) night, tomorrow, play, playing, better, expect, pick, tomorrow night, yesterday, today, need, defense
+    8 (+0.08) games, series, home, playing, feel, played, win, season, play, defense, playoffs, court
+    9 (+0.14) fourth, quarter, fourth quarter, series, inaudible, trouble, foul, quarters, foul trouble, win, feel, minutes
+   10 (+0.09) play, ball, feel, went, end, couple, happened, tonight, quarter, time, days, early
+   11 (+0.19) free, throws, free throws, room, locker, locker room, point, win, second, seconds, points, happened
+   12 (+0.12) finals, year, years, time, nba, season, series, playing, win, different, feel, player
+
+K = 15: NPMI coherence 0.112  diversity 0.45  seed stability 0.67
+    1 (+0.21) free, throw, shot, throws, free throw, free throws, line, film, watching, night, head, throw line
+    2 (+0.07) year, series, ball, shots, night, time, defense, feel, different, playoffs, point, change
+    3 (+0.18) quarter, fourth, fourth quarter, half, second, point, big, end, minutes, tonight, time, shot
+    4 (+0.09) tonight, feel, points, win, games, quarter, series, game tonight, big, coming, play, point
+    5 (+0.09) season, feel, feeling, run, playoff, series, forward, moment, point, injuries, group, career
+    6 (+0.12) feel, different, quarter, fourth, series, fourth quarter, games, shot, feel different, away, microphone, game feel
+    7 (+0.11) night, half, second, second half, pick, ball, defense, playing, better, roll, games, quarter
+    8 (+0.07) series, games, home, night, feel, win, season, defense, playing, court, played, play
+    9 (+0.14) inaudible, foul, night, trouble, series, fourth, quarter, foul trouble, bench, fourth quarter, offensive, having
+   10 (+0.09) play, ball, feel, went, tonight, quarter, end, late, feeling, early, happened, minutes
+   11 (+0.13) room, locker, locker room, win, games, point, lose, series, confidence, close, need, road
+   12 (+0.13) finals, year, years, time, nba, series, season, win, championship, feel, nba finals, different
+   13 (+0.06) shot, big, shots, night, time, played, long, play, hard, guy, clock, difficult
+   14 (+0.13) conference, tomorrow, day, conference finals, play, finals, season, injury, playing, western, feel, night
+   15 (+0.08) night, playing, play, finals, time, feel, couple, games, talked, different, days, years
+
+K = 20: NPMI coherence 0.105  diversity 0.42  seed stability 0.64
+    1 (+0.30) free, throw, throws, free throw, line, free throws, shot, head, throw line, end, went, missed
+    2 (+0.06) need, defense, film, feel, series, defensive, shots, point, year, change, ball, better
+    3 (+0.09) shots, play, shot, series, feel, quarter, hit, point, couple, big, end, second
+    4 (+0.09) tonight, feel, big, points, play, game tonight, start, coming, win, games, performance, tonight game
+    5 (+0.09) feel, season, player, career, time, moment, feeling, forward, group, wanted, people, point
+    6 (+0.07) feel, different, series, confidence, feel different, shooting, shot, game feel, year, having, days, microphone
+    7 (+0.16) half, second, second half, pick, quarter, ball, roll, playing, pick roll, defense, play, difference
+    8 (+0.06) games, series, home, playing, feel, indiscernible, playoffs, defense, court, play, played, time
+    9 (+0.11) foul, trouble, series, foul trouble, bench, play, night, offensive, tonight, feel, teams, percent
+   10 (+0.12) room, locker, locker room, play, went, feel, ball, happened, coach, time, end, tonight
+   11 (+0.09) win, road, games, home, point, help, win game, talked, winning, situation, won, experience
+   12 (+0.16) finals, year, nba, season, time, series, nba finals, championship, win, years, playing, feel
+   13 (+0.06) shot, playing, feel, series, finals, night, played, win, play, guarding, clock, games
+   14 (+0.08) tomorrow, play, feel, fans, playing, time, pain, injury, day, moment, coming, years
+   15 (+0.12) years, different, time, couple, finals, play, playing, ago, player, point, series, big
+   16 (+0.13) night, tomorrow, tomorrow night, game night, yesterday, night game, need, shots, practice, today, better, people
+   17 (+0.06) points, season, post, defense, series, different, play, paint, better, hard, break, year
+   18 (+0.16) quarter, fourth, fourth quarter, point, tonight, big, end, run, feel, minutes, quarters, time
+   19 (+0.07) series, games, win, play, feel, home, season, coming, played, looking, knowing, today
+   20 (+0.05) inaudible, games, ball, different, tone, set, played, defense, series, court, guy, set tone

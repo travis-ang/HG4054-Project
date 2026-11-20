@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pronoun labelling</title>
+<style>
+  :root { --bg:#14100d; --card:#211a14; --ink:#f6efe4; --muted:#bfae98; --line:#3a2f25; --gold:#f5b83d; --i:#b48cf2; --we:#4fc9e0; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 60px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .muted { color: var(--muted); }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; margin: 14px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details li { margin: 4px 0; }
+  .bar { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; margin: 10px 0 4px; }
+  .bar > div { height: 100%; background: var(--gold); width: 0; transition: width .2s; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px 28px; margin-top: 14px; min-height: 230px; }
+  .tag { display:inline-block; font-weight:700; font-size:14px; letter-spacing:.12em; text-transform:uppercase; padding:2px 10px; border-radius:99px; border:1.5px solid; }
+  .ctx { font-size: 23px; line-height: 1.6; margin-top: 16px; }
+  .ctx mark { background: rgba(245,184,61,.25); color: var(--gold); font-weight: 800; padding: 0 5px; border-radius: 6px; border-bottom: 3px solid var(--gold); }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+  button { font: inherit; font-weight: 600; color: var(--ink); background: #2c231b; border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 18px; cursor: pointer; }
+  button:hover { border-color: var(--gold); }
+  button.on { background: rgba(245,184,61,.2); border-color: var(--gold); }
+  button kbd { font: 700 14px ui-monospace, monospace; color: var(--gold); margin-right: 8px; }
+  .nav { display:flex; gap: 10px; align-items:center; justify-content: space-between; margin-top: 18px; flex-wrap: wrap; }
+  .counts { font-size: 15px; }
+  .done { color: #7fd6a5; font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Label the marked word (100-item check: random uses)</h1>
+  <div class="muted">Only the <b style="color:var(--gold)">highlighted</b> word counts. No names or tiers are shown. Labels save in this browser as you go.</div>
+
+  <details open>
+    <summary>Rules</summary>
+    <ul>
+      <li><b>"I" words.</b> <b>1 Self</b>: the speaker is the focus (own actions, ability, body, feelings, plans, achievements): "I made some shots", "my knee", "I'm proud of how I played".</li>
+      <li><b>2 Team</b>: the "I" pushes the focus or credit to the group or to others: "it's not about me", "I give credit to my teammates", "it's not just me".</li>
+      <li><b>3 Neither</b>: conversation or an opinion marker where the speaker is not the topic: "I think we played well", "I mean", "like I said", "I don't know".</li>
+      <li>In "I think I played well", the first "I" is <i>neither</i> and the second is <i>self</i>.</li>
+      <li><b>"We" words.</b> <b>1 Team</b>: the player's team (players, or players and staff). <b>2 Not team</b>: any other group (family, a pair of teammates, the league, people in general).</li>
+      <li>Keys: <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> label and move on · <kbd>←</kbd> back · <kbd>→</kbd> forward.</li>
+    </ul>
+  </details>
+
+  <div class="bar"><div id="bar"></div></div>
+  <div class="muted" id="prog"></div>
+
+  <div class="card">
+    <span class="tag" id="tag"></span>
+    <div class="ctx" id="ctx"></div>
+    <div class="btns" id="btns"></div>
+  </div>
+
+  <div class="nav">
+    <div>
+      <button id="back"><kbd>←</kbd>Back</button>
+      <button id="fwd"><kbd>→</kbd>Forward</button>
+      <button id="next">Next unlabelled</button>
+    </div>
+    <div>
+      <button id="dl">Download labels (CSV)</button>
+    </div>
+  </div>
+  <div class="counts muted" id="counts"></div>
+</main>
+<script>
+const ITEMS = [{"id": 1, "f": "i", "c": "Let's not let that accomplishment of things that you will have for the rest of your life, and people will always call you a champion for the rest of your life, let's not let someone uninviting you to their house take away from that moment. Because [[I]] think the championship -- winning a Super Bowl or winning a Stanley Cup or winning a World Series or winning an NBA Championship or National Championship -- is way bigger than getting invited to the White House, especially with him in there, in my opinion."}, {"id": 9, "f": "i", "c": "That's all I can give you right now, because I'm happy and I don't want to be stressed. They cause a lot of stress, and [[I'll]] get to that point when we start to prepare for them."}, {"id": 10, "f": "i", "c": "[[I]] talked to Joe."}, {"id": 23, "f": "i", "c": "That's what I was trying to do. They weren't playing double coverage, so if I got the ball in the paint, [[I]] was going to go for what I know."}, {"id": 26, "f": "i", "c": "Yeah, I did. [[I]] thought the days in between last game and this game I was able to get some work in, get my conditioning right, get the work in, and it just felt normal."}, {"id": 35, "f": "i", "c": "Oh, man, just how much [[I]] appreciate KCP and Brucie B."}, {"id": 41, "f": "i", "c": "I think [[I]] have to do a better job of getting everybody else involved, if I'm being brutally honest."}, {"id": 46, "f": "i", "c": "So I was playing big. They helped off [[me]], I was there for the shot."}, {"id": 47, "f": "i", "c": "Yeah, seeing shots go in is always a good feeling. Getting those opportunities when [[I'm]] on the court -- all of it is just shooting with confidence."}, {"id": 53, "f": "i", "c": "And the fact that I can look to my right and my left and see those two guys and a lot of our teammates and know that they believe we can win whatever game, we're going to have that edge. If I throw him the ball and he's going to shoot it, [[I]] know he believes it's going in."}, {"id": 56, "f": "i", "c": "He's always trying to give me little hints of how to be better, how to be a better player and help my body. [[I]] think this year, besides like that major fall against the Knicks, I think at least in my time I've been off the floor for my injuries."}, {"id": 71, "f": "i", "c": "Even when we were at the bottom, it still showed up to games, love around the city's always been there. So Phoenix is [[my]] city."}, {"id": 74, "f": "i", "c": "Yeah, I think that's tremendous for him and his career coaching. KP was like a father figure to [[me]] as far as just mentoring me when I was at Kentucky, and we still talk to this day, almost every day."}, {"id": 84, "f": "i", "c": "Yeah, and I love showing [[my]] defensive versatility."}, {"id": 90, "f": "i", "c": "Now I can lean up on that. [[I]] know I'm capable of doing that."}, {"id": 92, "f": "i", "c": "Oh, it's special. [[I]] wanted to achieve things like that when I was a rookie coming in."}, {"id": 101, "f": "i", "c": "[[I]] think they're just more sure."}, {"id": 108, "f": "i", "c": "[[I]] think their energy level was good, probably not as good as the first quarter, but we really held them."}, {"id": 110, "f": "i", "c": "It's good just to be able to do what I love. [[I]] was happy just to do that."}, {"id": 118, "f": "i", "c": "D-Wade had it going last night. [[I]] have had it going at points in this postseason where they've come to me, come to me and I've been able to close for our team."}, {"id": 127, "f": "i", "c": "[[I]] think it does and it doesn't."}, {"id": 130, "f": "i", "c": "Well, I mean, it's part of my motivation. [[I]] understand the drought our city has been in as far as a major championship, so it's a huge motivation inside of me."}, {"id": 133, "f": "i", "c": "No, no, I never had any conversation with anybody about what it takes to get to this point. [[I]] think I can relive one conversation that I had with Jerry West and with Isiah."}, {"id": 138, "f": "i", "c": "You cannot just become static. If you keep the ball on one side of the floor, like [[I]] said, they load up."}, {"id": 168, "f": "i", "c": "You know what I mean? I knew to switch that screen, but [[I]] didn't do it."}, {"id": 184, "f": "i", "c": "We obviously lost so you can try to pinpoint stuff and the reasons. Obviously, [[I]] didn't have to talk to any of you all to wake up and know I didn't play well in Game 2."}, {"id": 186, "f": "i", "c": "The good thing about playing for the Boston Celtics is that the expectation is always there. When [[I]] came here eight years ago, this is what I came here for, for these kind of moments."}, {"id": 188, "f": "i", "c": "I don't know how old I am. [[I]] don't know."}, {"id": 191, "f": "i", "c": "But against Toronto, it's hard to be in that spot, to lose the first game in your home. I think, as [[I]] said, guys are aware of that."}, {"id": 203, "f": "i", "c": "But I never thought that I'm going to come here, but to be honest I'm playing the same way since my days in Sombor, I think, so I didn't change. Maybe I upgrade a little bit, but I didn't trade [[my]] style or play since day one, and it's working."}, {"id": 207, "f": "i", "c": "Yeah, [[I've]] got to watch the film, but that was excellent basketball we played to start the third, especially on the offensive end."}, {"id": 211, "f": "i", "c": "Of course, I've got too much prove. [[I've]] got to keep getting better, keep playing more solid and every game, but I'm willing to take it and I think I am ready."}, {"id": 212, "f": "i", "c": "[[I]] hope he breaks out in Game 2 and that's got a lot to do with his teammates getting him the ball in the right spots, him being a little bit more aggressive."}, {"id": 215, "f": "i", "c": "Well, I thought that he was going to keep him in front of him, but obviously when you're guarding Ray Allen, you're concerned about his shot, shooting ability. I was just -- [[I]] saw the shot clock going down and kind of went to make sure I put a body on Garnett for the rebound, but I probably should have helped him out, react to that penetration."}, {"id": 228, "f": "i", "c": "We'll see what the ultimate outcome is I guess later today. To be honest, [[I]] think that is what is the problem."}, {"id": 235, "f": "i", "c": "Oh, [[I]] think both teams played extremely well at home."}, {"id": 240, "f": "i", "c": "All right (laughter). [[I]] want to make sure I put that, as well."}, {"id": 248, "f": "i", "c": "A little bit towards the end, but that's what [[I]] expected."}, {"id": 256, "f": "i", "c": "Missed some open looks again, like in Game 1. [[I]] got to be sharper in Game 3 if we want to have a chance."}, {"id": 289, "f": "i", "c": "[[I]] mean, you hear it."}, {"id": 299, "f": "i", "c": "And so do they. And you know, [[I]] was 0-for-2 from three tonight."}, {"id": 310, "f": "i", "c": "We've got to be much better going into Game 2. [[I]] don't think we're that far off."}, {"id": 318, "f": "i", "c": "And then Brandon Roy, my coach from high school, yeah, he called me the other day and he pretty much was just criticizing everything that I was doing. [[I]] think he's jealous, too, because he never made it to the Finals."}, {"id": 321, "f": "i", "c": "This is what fans want to see, this is what all the guys on the team all want to see, this is what we all want to see, our families. So [[I]] don't think there's anything going to change."}, {"id": 323, "f": "i", "c": "Well, [[I]] was 0-1 against him in high school."}, {"id": 342, "f": "i", "c": "For me as leader of the team, it's my job to lead the guys and to perform well. At the end of the day, win, lose or draw, that's all I can ask out of [[myself]] and ask out of my guys, and we'll do that."}, {"id": 347, "f": "i", "c": "[[I]] think as much as you want it to."}, {"id": 368, "f": "we", "c": "Keep hitting, keep hitting. They're going to make runs, just limit their runs and maximize [[ours]], and like I said, it's a game of runs so just try to limit their runs as much as possible."}, {"id": 370, "f": "we", "c": "But everything we were saying going into the fourth, it's time. Let's play [[our]] fourth-quarter defense, what we're capable of doing."}, {"id": 374, "f": "we", "c": "We've been talking. Like I said we have saying, Next Man Up, we feel like we have enough in our locker room, no matter if one guy goes down, [[we]] hate that but we are all in it together."}, {"id": 375, "f": "we", "c": "We've just got to come out and play basketball for 48 minutes. We do the best [[we]] can every single night and it's gotten us to the Finals."}, {"id": 377, "f": "we", "c": "But we're still trying to make the proper steps, trying to -- we haven't had a chance to reconvene. We need more time as a group, not just [[our]] team but everyone in the bubble and outside the bubble to figure out how we can continue to get progress in these certain aspects, in these certain categories, in certain communities, because with what happened today wasn't enough."}, {"id": 386, "f": "we", "c": "I like that type of vibe, when everybody is not complacent. We know we won Game 1 by the skin of [[our]] teeth."}, {"id": 412, "f": "we", "c": "He realizes that and got the fire from last year, too. Last year [[we]] were really disappointed."}, {"id": 427, "f": "we", "c": "I felt like [[we]] were able to draw double teams and then move the ball as opposed to just going in there and just posting."}, {"id": 429, "f": "we", "c": "They played pretty much all their guys because one of their guys went out, which is just unfortunate. They made some shots and [[we]] didn't."}, {"id": 431, "f": "we", "c": "But we feel like overall we were fairly sharp. But [[we]] could be sharper."}, {"id": 448, "f": "we", "c": "We can just really go to [[our]] homes and have a good day today and let everything go today and have a good start to a great day tomorrow."}, {"id": 460, "f": "we", "c": "Yeah, I mean, it wasn't cool that he was killing us and [[we]] were losing."}, {"id": 463, "f": "we", "c": "First of all, I think if we make it happen, we're going to be in NBA history anyway. So I think [[we]] have to take a day at a time, make sure that tomorrow we come out very focused at shootaround and at the game."}, {"id": 465, "f": "we", "c": "Obviously, we haven't had it. [[We]] are trying to."}, {"id": 467, "f": "we", "c": "We're going to drink some beers back there. [[We]] are going to go have some wine."}, {"id": 473, "f": "we", "c": "He didn't tell me at shootaround that he was sore, so it's a tough one. How important Tony is for [[us]]."}, {"id": 474, "f": "we", "c": "We need him to be him. Like I said, [[we]] don't need to come in here and start doing things we haven't done before."}, {"id": 478, "f": "we", "c": "For sure. For sure, definitely, especially because we had the lead and [[we]] were doing good."}, {"id": 480, "f": "we", "c": "Well, absolutely. We've always got to focus on the defensive end especially when Steph is out, because [[we]] usually don't score as many points when he's not out there."}, {"id": 482, "f": "we", "c": "Just him hitting those shots really made us have to think on defense, who do we guard? Do [[we]] guard the paint or do we have to go out to the shooters out in the corner?"}, {"id": 486, "f": "we", "c": "I know that together this group, it's how we want to win it. I think we enjoy each other's success so much, man, that you can tell every single day when [[we're]] in the hotel."}, {"id": 492, "f": "we", "c": "Oh, man, if we didn't believe we was going to win we shouldn't have suited up. We all believe in [[ourselves]] and believe that every time we step on that floor, we're going to win, regardless who we play against."}, {"id": 494, "f": "we", "c": "[[We]] can use his-- we're going to have to have him out there on the court."}, {"id": 500, "f": "we", "c": "We really only made it to the second round, but that's a team that the world will always remember. For some strange reason I think it was just our chemistry and the way [[we]] handled ourselves and the way we played."}, {"id": 504, "f": "we", "c": "Right, you expect the opposite, but it's interesting. [[We've]] kind of started our own little club, he and I."}, {"id": 511, "f": "we", "c": "But I think it's just the moment and everything. Even mic'd up or not, I think guys, [[we're]] going to say what we want to say."}, {"id": 512, "f": "we", "c": "We were a little younger than they are, so we knew we could take advantage of that. So [[we're]] going to try to do the same thing Sunday."}, {"id": 514, "f": "we", "c": "We've done a mediocre job of execution on both ends of the court, and it has landed us into a 3-2 series right now. So like I said, we have confidence to where [[we]] are right now."}, {"id": 524, "f": "we", "c": "People are free to ask as many questions as they want. It's our job to make sure [[we're]] putting 100% into the game, and it's going to require that from here on out."}, {"id": 551, "f": "we", "c": "The biggest thing obviously is to protect yourself and be physical in obviously a fair way. But I think our team has stepped up tremendously in terms of how physical [[we've]] been."}, {"id": 552, "f": "we", "c": "We need to put together just the focus and the determination along with the energy. I thought [[we]] had great energy last night."}, {"id": 554, "f": "we", "c": "After I saw Giannis, and honestly Jabari [Parker] for the first time, I thought this team could be really, really good. [[We]] had future stars."}, {"id": 559, "f": "we", "c": "We have [[our]] adjustments."}, {"id": 566, "f": "we", "c": "It's a high percentage shot for us. He's put most of them down, and [[we]] want them."}, {"id": 589, "f": "we", "c": "I can't exactly remember how you worded the question, so I'm just going to guess. I know that together this group, it's how [[we]] want to win it."}, {"id": 597, "f": "we", "c": "Whether that works or not, we'll see. But that's the approach I'm going to take, and [[we'll]] see if it works out."}, {"id": 608, "f": "we", "c": "I don't know. As long as [[we're]] winning games, I think."}, {"id": 614, "f": "we", "c": "Like in the second half, I mean, we pretty much controlled the game. We executed the offense, we delivered the ball inside and [[we]] were playing much harder defensively."}, {"id": 642, "f": "we", "c": "Like we know things are going to go bad at times, things are going to go good, but you have to be even keeled, calm waters, you know what I mean. To answer your question, I think that [[we]] just knew we had to value the ball a lot more."}, {"id": 645, "f": "we", "c": "My agent, he's also Alonzo's agent and he's had some of the same things go on. He said it was actually better for him in the long run, but right now [[we're]] more of in the short-term thing."}, {"id": 659, "f": "we", "c": "It's just about playing to [[our]] capability."}, {"id": 660, "f": "we", "c": "Yeah, not really worried about that. I just think no matter what [[we]] did today, we were going to learn and get better, whether it's on the court or in the film room."}, {"id": 663, "f": "we", "c": "We've always fought when we felt like we knew we had to. Now we're at the point where [[we]] can't wait."}, {"id": 671, "f": "we", "c": "He has a chance to be as great as he wants to be, you know what I mean. So I just try to push him and challenge him and also be there for him any way I can because [[we]] only go as far as he goes, as he takes us, and you know, he's taken us pretty far right now."}, {"id": 677, "f": "we", "c": "A bunch of things I don't really want to talk about now. I think [[our]] mentality and our focus has to be better."}, {"id": 680, "f": "we", "c": "All in all, I think the year was a great year. Those guys in that locker room, through any circumstance, have stepped up, even from the start of the year, how things started off with [[our]] coaching staff, with all the different turmoil that we've experienced throughout the year, injuries, whatever."}, {"id": 685, "f": "we", "c": "We took it to another level as far as just playing as hard as we can. Everybody on our team did that, and I think that's a level that [[we're]] going to need to play at for this series, as well."}, {"id": 687, "f": "we", "c": "…me, it's not saying that they're not going to be different, but if we can hold them to 42 percent and we cut our turnovers from 20 to 12 and we maybe turn them over more than four times, all of a sudden now we're in a position where we're winning that game or [[we're]] up by 10."}, {"id": 698, "f": "we", "c": "Yeah, the regular season is interesting because like I said, [[we]] started off so well and Klay came back, things got shuffled around."}, {"id": 702, "f": "we", "c": "…ayer like Bron on your team, sometimes you can get caught watching and you allow him to be great, and in the case of occasional games where it's my job to be aggressive in all facets and keep us within the game and constantly staying in attack mode, you know, [[we're]] quite a different team, and when we're doing our defensive end and my teammates are able to get stops and we get out in transition, then we get some easy lay-ups and get some easy shots then I'm able to iso at the elbow, get some quality looks, we're a great …"}, {"id": 705, "f": "we", "c": "It's not Game 58 of the regular season or something. So the way we avoid it is come in locked in from the jump, don't turn the ball over, try and get a shot down the floor every time, and stick to the game plan [[we]] have been doing on defense the last two games, and I think we'll be in a good position to win the game."}, {"id": 708, "f": "we", "c": "But we're desperate. [[We're]] a desperate team as well."}, {"id": 719, "f": "we", "c": "We've just got to play better as a team. Overall as a team, [[we]] didn't shoot the ball real well tonight and we just kind of keep getting everybody involved and act like we want it and we'll be okay in Game 2."}];
+const KEY = "hg4054-pronoun-labels-check100-v1";
+const OPTS = { i: [["self", "Self"], ["team", "Team"], ["neither", "Neither"]], we: [["team", "Team"], ["not_team", "Not team"]] };
+let labels = {};
+try { labels = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { labels = {}; }
+let k = 0;
+const firstOpen = () => { const j = ITEMS.findIndex(it => !labels[it.id]); return j < 0 ? ITEMS.length - 1 : j; };
+k = firstOpen();
+
+function save() { try { localStorage.setItem(KEY, JSON.stringify(labels)); } catch (e) {} }
+
+function render() {
+  const it = ITEMS[k];
+  const isI = it.f === "i";
+  const tag = document.getElementById("tag");
+  tag.textContent = isI ? '"I" word' : '"We" word';
+  tag.style.color = tag.style.borderColor = isI ? "var(--i)" : "var(--we)";
+  const ctx = document.getElementById("ctx");
+  ctx.textContent = "";
+  const a = it.c.indexOf("[["), b = it.c.indexOf("]]");
+  ctx.append(document.createTextNode(it.c.slice(0, a)));
+  const m = document.createElement("mark"); m.textContent = it.c.slice(a + 2, b); ctx.append(m);
+  ctx.append(document.createTextNode(it.c.slice(b + 2)));
+  const btns = document.getElementById("btns");
+  btns.textContent = "";
+  OPTS[it.f].forEach(([val, name], j) => {
+    const bt = document.createElement("button");
+    bt.innerHTML = `<kbd>${j + 1}</kbd>`; bt.append(document.createTextNode(name));
+    if (labels[it.id] === val) bt.classList.add("on");
+    bt.onclick = () => choose(j);
+    btns.append(bt);
+  });
+  const n = Object.keys(labels).length;
+  document.getElementById("bar").style.width = (100 * n / ITEMS.length) + "%";
+  document.getElementById("prog").innerHTML = `Item ${k + 1} of ${ITEMS.length} · ${n} labelled` + (n === ITEMS.length ? ' · <span class="done">all done: download the CSV</span>' : "");
+  const c = {};
+  ITEMS.forEach(x => { const l = labels[x.id]; if (l) c[x.f + ":" + l] = (c[x.f + ":" + l] || 0) + 1; });
+  document.getElementById("counts").textContent = Object.entries(c).map(([q, v]) => q.replace("i:", '"I" ').replace("we:", '"we" ') + " " + v).join(" · ");
+}
+
+function choose(j) {
+  const it = ITEMS[k];
+  const opt = OPTS[it.f][j];
+  if (!opt) return;
+  labels[it.id] = opt[0]; save();
+  if (k < ITEMS.length - 1) k++;
+  render();
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key >= "1" && e.key <= "3") { choose(+e.key - 1); e.preventDefault(); }
+  else if (e.key === "ArrowLeft" || e.key === "Backspace") { if (k > 0) k--; render(); e.preventDefault(); }
+  else if (e.key === "ArrowRight") { if (k < ITEMS.length - 1) k++; render(); e.preventDefault(); }
+});
+document.getElementById("back").onclick = () => { if (k > 0) k--; render(); };
+document.getElementById("fwd").onclick = () => { if (k < ITEMS.length - 1) k++; render(); };
+document.getElementById("next").onclick = () => { k = firstOpen(); render(); };
+document.getElementById("dl").onclick = () => {
+  const rows = ["lid,family,label"].concat(ITEMS.filter(x => labels[x.id]).map(x => `${x.id},${x.f},${labels[x.id]}`));
+  const blob = new Blob([rows.join("\n") + "\n"], { type: "text/csv" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "labels_travis_check.csv"; a.click();
+};
+render();
+</script>
+</body>
+</html>

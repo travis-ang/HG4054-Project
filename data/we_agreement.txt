@@ -1,0 +1,24 @@
+Step 12 second coder: agreement between Claude (first, not blind) and AI coder 2 (second, blind to tier)
+
+Uses: 90
+All four codes: agreement 94%, Cohen's kappa 0.76
+Team (team or wider) vs not: agreement 94%, Cohen's kappa 0.75
+
+Rows: first coder (Claude); columns: second coder (AI coder 2)
+code         generic  other_group  team
+referent                               
+generic            2            0     1
+other_group        0            7     0
+team               0            4    76
+
+Share of uses that mean the team (team or wider), by tier:
+  role       Claude 26/30   AI coder 2 25/30
+  starter    Claude 27/30   AI coder 2 26/30
+  superstar  Claude 27/30   AI coder 2 26/30
+
+Disagreements:
+  id 30 [role] Claude team, AI coder 2 other_group: Rodney Hood. All four of us are just so thrilled to be here that [[we]] don't really need any more direction between the four of us now.
+  id 51 [role] Claude generic, AI coder 2 team: You worked all year for this. [[We]] worked this summer.
+  id 61 [role] Claude team, AI coder 2 other_group: We got a routine to shoot free throws every day after practice, shoot 10, make five in a row, then six in a row. [[We]] do it every day consistently.
+  id 78 [starter] Claude team, AI coder 2 other_group: It's only one game. The good thing about [[our]] playoffs, it's seven games.
+  id 89 [superstar] Claude team, AI coder 2 other_group: And I was popping back and then Kevin was going to dive into the basket. It was up to Pose to throw whichever way he thought one of [[us]] was open.

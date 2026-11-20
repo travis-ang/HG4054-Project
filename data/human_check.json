@@ -1,0 +1,161 @@
+{
+ "n": 100,
+ "n_i": 47,
+ "n_we": 53,
+ "vs": {
+  "training labels (AI coder)": {
+   "i": {
+    "n": 47,
+    "agree": 31,
+    "pct": 66,
+    "kappa": 0.43
+   },
+   "we": {
+    "n": 53,
+    "agree": 49,
+    "pct": 92,
+    "kappa": 0.46
+   }
+  },
+  "Claude": {
+   "i": {
+    "n": 47,
+    "agree": 32,
+    "pct": 68,
+    "kappa": 0.47
+   },
+   "we": {
+    "n": 53,
+    "agree": 50,
+    "pct": 94,
+    "kappa": 0.54
+   }
+  },
+  "second AI coder": {
+   "i": {
+    "n": 47,
+    "agree": 31,
+    "pct": 66,
+    "kappa": 0.43
+   },
+   "we": {
+    "n": 53,
+    "agree": 49,
+    "pct": 92,
+    "kappa": 0.46
+   }
+  },
+  "classifier (held-out players)": {
+   "i": {
+    "n": 47,
+    "agree": 29,
+    "pct": 62,
+    "kappa": 0.37
+   }
+  }
+ },
+ "self_team_both": {
+  "n": 21,
+  "agree": 17
+ },
+ "shares": {
+  "travis_i": {
+   "self": 23,
+   "neither": 15,
+   "team": 9
+  },
+  "training_i": {
+   "self": 24,
+   "neither": 22,
+   "team": 1
+  },
+  "classifier_i": {
+   "neither": 23,
+   "self": 22,
+   "team": 2
+  },
+  "travis_we_team": 49
+ },
+ "i_disagreements": [
+  {
+   "lid": 9,
+   "travis": "team",
+   "training": "self"
+  },
+  {
+   "lid": 10,
+   "travis": "neither",
+   "training": "self"
+  },
+  {
+   "lid": 41,
+   "travis": "team",
+   "training": "self"
+  },
+  {
+   "lid": 53,
+   "travis": "team",
+   "training": "neither"
+  },
+  {
+   "lid": 74,
+   "travis": "team",
+   "training": "self"
+  },
+  {
+   "lid": 90,
+   "travis": "self",
+   "training": "neither"
+  },
+  {
+   "lid": 127,
+   "travis": "self",
+   "training": "neither"
+  },
+  {
+   "lid": 130,
+   "travis": "neither",
+   "training": "self"
+  },
+  {
+   "lid": 133,
+   "travis": "team",
+   "training": "neither"
+  },
+  {
+   "lid": 212,
+   "travis": "team",
+   "training": "neither"
+  },
+  {
+   "lid": 215,
+   "travis": "neither",
+   "training": "self"
+  },
+  {
+   "lid": 235,
+   "travis": "team",
+   "training": "neither"
+  },
+  {
+   "lid": 240,
+   "travis": "self",
+   "training": "neither"
+  },
+  {
+   "lid": 310,
+   "travis": "team",
+   "training": "neither"
+  },
+  {
+   "lid": 318,
+   "travis": "self",
+   "training": "neither"
+  },
+  {
+   "lid": 347,
+   "travis": "self",
+   "training": "neither"
+  }
+ ]
+}

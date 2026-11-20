@@ -1,0 +1,70 @@
+Fun fact: highest and lowest team-focused share by player (descriptive; Step 18 main measure)
+Units 4,415, players 377; pooled share over all units 63.0%; median player share 64.6% (all players).
+share = (team "I" + all "we") / (self "I" + team "I" + all "we"), pooled over the player's units.
+CI: Wilson on pooled counts (ignores within-player clustering: too narrow). adj = observed minus model-A prediction (all controls), in points.
+
+== at least 200 self+team pronouns and 5 units: 152 players; share range 21.9% to 89.5%
+-- highest share
+Carlos Boozer               89.5%  [85.6, 92.4]  adj +16.6  pron   314  units  10  starter/superstar    2007-2011
+Zydrunas Ilgauskas          88.8%  [84.2, 92.3]  adj +16.2  pron   233  units  10  starter              2007-2009
+Obi Toppin                  88.5%  [83.6, 92.1]  adj +26.3  pron   218  units   9  role                 2025-2025
+De'Aaron Fox                88.1%  [84.6, 90.9]  adj +21.1  pron   403  units   9  superstar            2023-2026
+Avery Bradley               86.9%  [82.8, 90.1]  adj +15.7  pron   328  units   5  starter              2017-2017
+-- lowest share
+Kristaps Porzingis          21.9%  [17.3, 27.3]  adj -24.3  pron   260  units   6  starter              2024-2024
+Ron Artest                  25.8%  [21.3, 31.0]  adj -27.2  pron   310  units  11  starter              2010-2010
+Bobby Portis                27.6%  [23.8, 31.9]  adj -29.4  pron   463  units   7  role                 2021-2021
+Bruce Brown                 34.1%  [29.3, 39.2]  adj -21.5  pron   349  units   9  role                 2023-2023
+Daniel Gibson               34.9%  [29.5, 40.8]  adj -26.1  pron   269  units  11  role                 2007-2009
+-- highest adjusted
+Obi Toppin                  88.5%  [83.6, 92.1]  adj +26.3  pron   218  units   9  role                 2025-2025
+De'Aaron Fox                88.1%  [84.6, 90.9]  adj +21.1  pron   403  units   9  superstar            2023-2026
+Kevin Love                  83.2%  [81.1, 85.2]  adj +18.0  pron 1,271  units  35  role/starter/superstar 2016-2023
+-- lowest adjusted
+Bobby Portis                27.6%  [23.8, 31.9]  adj -29.4  pron   463  units   7  role                 2021-2021
+Ron Artest                  25.8%  [21.3, 31.0]  adj -27.2  pron   310  units  11  starter              2010-2010
+Daniel Gibson               34.9%  [29.5, 40.8]  adj -26.1  pron   269  units  11  role                 2007-2009
+
+== at least 500 self+team pronouns and 10 units: 75 players; share range 37.1% to 86.4%
+-- highest share
+Steve Nash                  86.4%  [84.1, 88.3]  adj +11.4  pron 1,033  units  27  superstar            2005-2010
+Kevin Love                  83.2%  [81.1, 85.2]  adj +18.0  pron 1,271  units  35  role/starter/superstar 2016-2023
+Richard Hamilton            82.2%  [80.0, 84.2]  adj +14.2  pron 1,281  units  38  starter/superstar    2004-2008
+James Harden                81.0%  [78.2, 83.5]  adj  +9.7  pron   831  units  33  role/superstar       2011-2019
+Al Horford                  78.9%  [76.8, 80.8]  adj  +8.6  pron 1,556  units  38  starter/superstar    2015-2024
+-- lowest share
+Jalen Williams              37.1%  [33.4, 40.9]  adj -17.9  pron   636  units  14  superstar            2025-2025
+Kawhi Leonard               38.3%  [35.0, 41.6]  adj -13.2  pron   847  units  35  starter/superstar    2013-2023
+DeAndre Ayton               40.4%  [36.8, 44.1]  adj -21.8  pron   676  units  13  starter              2021-2021
+Giannis Antetokounmpo       41.5%  [39.3, 43.6]  adj -10.1  pron 2,016  units  20  superstar            2019-2021
+LeBron James                49.7%  [49.0, 50.5]  adj  -9.6  pron 15,900  units 202  superstar            2007-2023
+-- highest adjusted
+Kevin Love                  83.2%  [81.1, 85.2]  adj +18.0  pron 1,271  units  35  role/starter/superstar 2016-2023
+Richard Hamilton            82.2%  [80.0, 84.2]  adj +14.2  pron 1,281  units  38  starter/superstar    2004-2008
+Derek Fisher                78.8%  [76.7, 80.7]  adj +12.2  pron 1,563  units  48  role/starter         2004-2014
+-- lowest adjusted
+DeAndre Ayton               40.4%  [36.8, 44.1]  adj -21.8  pron   676  units  13  starter              2021-2021
+Jalen Williams              37.1%  [33.4, 40.9]  adj -17.9  pron   636  units  14  superstar            2025-2025
+Kawhi Leonard               38.3%  [35.0, 41.6]  adj -13.2  pron   847  units  35  starter/superstar    2013-2023
+
+== at least 1000 self+team pronouns and 20 units: 43 players; share range 41.5% to 86.4%
+-- highest share
+Steve Nash                  86.4%  [84.1, 88.3]  adj +11.4  pron 1,033  units  27  superstar            2005-2010
+Kevin Love                  83.2%  [81.1, 85.2]  adj +18.0  pron 1,271  units  35  role/starter/superstar 2016-2023
+Richard Hamilton            82.2%  [80.0, 84.2]  adj +14.2  pron 1,281  units  38  starter/superstar    2004-2008
+Al Horford                  78.9%  [76.8, 80.8]  adj  +8.6  pron 1,556  units  38  starter/superstar    2015-2024
+Derek Fisher                78.8%  [76.7, 80.7]  adj +12.2  pron 1,563  units  48  role/starter         2004-2014
+-- lowest share
+Giannis Antetokounmpo       41.5%  [39.3, 43.6]  adj -10.1  pron 2,016  units  20  superstar            2019-2021
+LeBron James                49.7%  [49.0, 50.5]  adj  -9.6  pron 15,900  units 202  superstar            2007-2023
+Pascal Siakam               52.4%  [49.6, 55.2]  adj  -5.6  pron 1,200  units  26  starter/superstar    2019-2025
+Rajon Rondo                 52.5%  [49.5, 55.4]  adj -10.3  pron 1,077  units  34  role/starter/superstar 2008-2020
+Jrue Holiday                55.2%  [52.2, 58.1]  adj -10.0  pron 1,095  units  31  starter              2018-2024
+-- highest adjusted
+Kevin Love                  83.2%  [81.1, 85.2]  adj +18.0  pron 1,271  units  35  role/starter/superstar 2016-2023
+Richard Hamilton            82.2%  [80.0, 84.2]  adj +14.2  pron 1,281  units  38  starter/superstar    2004-2008
+Derek Fisher                78.8%  [76.7, 80.7]  adj +12.2  pron 1,563  units  48  role/starter         2004-2014
+-- lowest adjusted
+Rajon Rondo                 52.5%  [49.5, 55.4]  adj -10.3  pron 1,077  units  34  role/starter/superstar 2008-2020
+Giannis Antetokounmpo       41.5%  [39.3, 43.6]  adj -10.1  pron 2,016  units  20  superstar            2019-2021
+Jrue Holiday                55.2%  [52.2, 58.1]  adj -10.0  pron 1,095  units  31  starter              2018-2024

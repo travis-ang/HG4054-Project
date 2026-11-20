@@ -1,0 +1,11 @@
+topic,label,npmi,stability,top_words
+topic_1,Season and playoff run,0.149,0.8,"year, season, final, playoff, experience, conference, day, ago, conference final, run, player, group, regular season, regular, start"
+topic_2,First half: fouls and turnovers,0.167,0.54,"half, second, second half, quarter, tonight, foul, turnover, second quarter, start, happened, early, trouble, room, locker, loss"
+topic_3,Fourth quarter and closing,0.188,0.9,"quarter, fourth, fourth quarter, minute, run, shot, end, tonight, stretch, late, win, happened, hit, final, year"
+topic_4,Championship and legacy,0.167,0.86,"year, final, win, championship, moment, nba, player, career, season, title, won, winning, thought, ago, special"
+topic_5,Tactics and adjustments,0.083,0.87,"night, defense, adjustment, defensively, need, ball, defensive, offense, change, pick, expect, film, playoff, roll, lineup"
+topic_6,Shooting and free throws,0.169,0.54,"shot, ball, throw, free, tonight, free throw, shooting, line, night, hit, end, second, making, trying, need"
+topic_7,Pressure and mindset,0.077,0.54,"playoff, challenge, moment, defense, season, trying, day, sense, knowing, try, watching, stay, long, confidence, player"
+topic_8,The Finals stage,0.141,0.72,"final, player, nba, day, nba final, experience, moment, basketball, coach, room, night, shot, teammate, important, minute"
+topic_9,Individual performance,0.089,0.84,"tonight, win, minute, shot, season, quarter, performance, end, playoff, mentioned, defense, run, early, today, coach"
+topic_10,Home court and the series,0.111,0.7,"home, night, tomorrow, court, year, win, home court, fan, need, advantage, day, road, tomorrow night, today, expect"

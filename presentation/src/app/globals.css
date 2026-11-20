@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #120c08;
+  --floor: #2a1c12;
+  --surface: #1c1510;
+  --surface2: #2a2018;
+  --cream: #f6efe4;
+  --muted: #cbb9a3;
+  --dim: #8f7c66;
+  --gold: #f5b83d;
+  --ball: #f26a1b;
+  --led: #ffb547;
+  --role: #e86a2e;
+  --starter: #1aa87e;
+  --superstar: #4a90ec;
+  --i: #b48cf2;
+  --we: #4fc9e0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #080504;
+  color: var(--cream);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-barlow), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-bebas), Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.font-cond {
+  font-family: var(--font-barlow-cond), var(--font-barlow), sans-serif;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* clickable things on a slide (they stop the click from moving the deck on) */
+.tap {
+  cursor: pointer;
+}
+.tap-lift {
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.tap-lift:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
+}

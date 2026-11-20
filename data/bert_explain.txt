@@ -1,0 +1,19 @@
+Step 19: numbers for the slide that explains BERT (descriptive)
+
+Fill in the blank (Larry Nance Jr. 2018): "I ___, you hear it." -> mean 45%, know 17%, said 7%, say 7%, hear 3%
+
+self: Jimmy Butler 2022: And you know, [[I]] was 0-for-2 from three tonight.  (BERT label self; median similarity to all "I" -0.013)
+   0.646 self     Kevin Love 2018: [[I]] was 1-for-8 from the three-point line.
+   0.604 self     Dwyane Wade 2014: Myself, [[I]] was 3 for 13.
+   0.594 self     Victor Wembanyama 2026: Yeah, [[I]] was bad tonight.
+neither: Larry Nance Jr. 2018: [[I]] mean, you hear it.  (BERT label neither; median similarity to all "I" -0.063)
+   0.887 neither  Stephen Curry 2015: [[I]] mean, it's a different team, but the same situation we were in.
+   0.880 neither  Draymond Green 2015: [[I]] mean, we thought that from the beginning.
+   0.861 neither  Tristan Thompson 2018: [[I]] mean, it's only four guys that have been in that situation.
+team: Kawhi Leonard 2019: It's really not about [[me]].  (BERT label team; median similarity to all "I" -0.016)
+   0.841 team     LeBron James 2018: It's not about [[me]].
+   0.786 team     Jamal Murray 2023: It's not really about [[me]].
+   0.755 team     Kevin Love 2017: So as far as my performance, it's not really about [[me]].
+similarity self vs neither: -0.132
+similarity self vs team: +0.175
+similarity neither vs team: -0.189

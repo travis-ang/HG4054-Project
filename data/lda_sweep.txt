@@ -1,0 +1,94 @@
+Documents (units with questions): 4,425   vocabulary: 3,263 terms   median words kept per document: 46
+Name words removed (946), e.g.: aaron, abdul, ad, adam, adams, adebayo, adelman, adreian, adrian, aj, al, aldridge, alex, alexander, alfonzo, allan, allen, alonzo, alston, alvarado, alvin, amar, andersen, anderson, andre, andrei, andrew, andy, angeles, angelo, antetokounmpo, anthony, antic, antoine, antoni, antonio, anunoby, ariel, ariza, aron
+Removed as too common (in > 50% of documents): team
+Summary
+ K  npmi  diversity  stability
+ 5 0.138      0.712      0.808
+ 8 0.125      0.585      0.765
+10 0.134      0.532      0.736
+12 0.132      0.513      0.706
+15 0.106      0.493      0.677
+20 0.114      0.470      0.655
+
+
+K = 5: NPMI coherence 0.138  diversity 0.71  seed stability 0.81
+    1 (+0.14) year, final, season, player, nba, playoff, moment, championship, win, experience, career, run
+    2 (+0.16) tonight, shot, second, half, quarter, second half, ball, end, minute, defense, foul, early
+    3 (+0.19) quarter, fourth, fourth quarter, win, tonight, home, minute, throw, free throw, free, end, court
+    4 (+0.11) day, win, room, year, locker, locker room, night, tomorrow, final, court, situation, fan
+    5 (+0.08) night, defense, shot, ball, need, defensively, playoff, offense, adjustment, shooting, change, defensive
+
+K = 8: NPMI coherence 0.125  diversity 0.58  seed stability 0.77
+    1 (+0.15) year, final, season, championship, playoff, conference, nba, ago, moment, win, run, experience
+    2 (+0.15) tonight, half, second, quarter, second half, minute, happened, shot, turnover, room, end, season
+    3 (+0.14) quarter, fourth, fourth quarter, tonight, minute, win, home, shot, run, court, end, stretch
+    4 (+0.09) year, win, final, court, home, room, day, season, moment, term, locker, tomorrow
+    5 (+0.07) night, defense, need, defensively, tomorrow, adjustment, playoff, ball, defensive, offense, expect, important
+    6 (+0.17) shot, tonight, ball, throw, free, free throw, shooting, hit, night, line, win, end
+    7 (+0.08) playoff, challenge, day, change, moment, help, player, knowing, need, season, stay, forward
+    8 (+0.15) final, player, nba, nba final, moment, experience, fan, basketball, day, teammate, league, important
+
+K = 10: NPMI coherence 0.134  diversity 0.53  seed stability 0.74
+    1 (+0.15) year, season, final, playoff, experience, conference, day, ago, conference final, run, player, group
+    2 (+0.17) half, second, second half, quarter, tonight, foul, turnover, second quarter, start, happened, early, trouble
+    3 (+0.19) quarter, fourth, fourth quarter, minute, run, shot, end, tonight, stretch, late, win, happened
+    4 (+0.17) year, final, win, championship, moment, nba, player, career, season, title, won, winning
+    5 (+0.08) night, defense, adjustment, defensively, need, ball, defensive, offense, change, pick, expect, film
+    6 (+0.17) shot, ball, throw, free, tonight, free throw, shooting, line, night, hit, end, second
+    7 (+0.08) playoff, challenge, moment, defense, season, trying, day, sense, knowing, try, watching, stay
+    8 (+0.14) final, player, nba, day, nba final, experience, moment, basketball, coach, room, night, shot
+    9 (+0.09) tonight, win, minute, shot, season, quarter, performance, end, playoff, mentioned, defense, run
+   10 (+0.11) home, night, tomorrow, court, year, win, home court, fan, need, advantage, day, road
+
+K = 12: NPMI coherence 0.132  diversity 0.51  seed stability 0.71
+    1 (+0.16) year, final, season, championship, conference, nba, playoff, conference final, ago, win, run, moment
+    2 (+0.17) half, second, quarter, tonight, second half, double, turnover, second quarter, end, run, happened, start
+    3 (+0.17) quarter, fourth, fourth quarter, shot, minute, run, late, win, stretch, tonight, hit, end
+    4 (+0.14) year, win, moment, final, title, day, career, championship, mind, season, term, court
+    5 (+0.09) night, defense, defensive, defensively, pick, lineup, roll, ball, offense, playoff, adjustment, offensive
+    6 (+0.17) shot, tonight, ball, throw, free, free throw, night, foul, shooting, line, second, hit
+    7 (+0.14) room, locker, locker room, playoff, coach, jokic, moment, season, challenge, trying, head, teammate
+    8 (+0.16) final, player, nba, nba final, day, experience, moment, basketball, teammate, stage, coach, league
+    9 (+0.08) tonight, win, season, minute, shot, playoff, end, help, performance, quarter, run, defense
+   10 (+0.09) year, fan, night, challenge, wondering, ago, long, league, final, heard, sense, best
+   11 (+0.09) night, tomorrow, ball, need, film, change, win, help, adjustment, tomorrow night, today, day
+   12 (+0.11) home, playoff, court, night, year, road, win, home court, level, advantage, important, season
+
+K = 15: NPMI coherence 0.106  diversity 0.49  seed stability 0.68
+    1 (+0.08) year, need, lineup, season, start, small, ball, starting, ago, defense, guard, year ago
+    2 (+0.16) half, second, tonight, second half, quarter, double, second quarter, turnover, shot, run, end, ball
+    3 (+0.07) player, night, year, best, today, yesterday, practice, ball, win, fan, crowd, change
+    4 (+0.07) tomorrow, night, win, day, situation, term, pressure, today, change, need, help, sense
+    5 (+0.10) night, defense, roll, defensively, pick, defensive, shot, offense, adjustment, set, pick roll, offensive
+    6 (+0.17) shot, tonight, throw, ball, free, free throw, shooting, night, line, foul, hit, second
+    7 (+0.08) challenge, playoff, defense, jokic, defensively, player, help, league, trying, try, forward, adjustment
+    8 (+0.14) room, locker, locker room, player, final, nba, shot, thought, coach, fan, basketball, important
+    9 (+0.11) tonight, season, playoff, regular, regular season, end, win, minute, shot, tough, run, mentioned
+   10 (+0.06) night, tomorrow, tomorrow night, year, fan, overtime, help, media, social, learned, teammate, situation
+   11 (+0.07) ball, win, final, court, player, end, shot, injury, movement, trying, turnover, wanted
+   12 (+0.12) home, year, court, win, road, playoff, night, home court, advantage, won, level, important
+   13 (+0.15) year, final, season, nba, moment, championship, player, career, playoff, win, nba final, experience
+   14 (+0.06) day, win, today, rebound, ready, coach, pain, performance, injury, mind, message, turnaround
+   15 (+0.16) quarter, fourth, fourth quarter, tonight, minute, shot, end, run, happened, win, moment, stretch
+
+K = 20: NPMI coherence 0.114  diversity 0.47  seed stability 0.65
+    1 (+0.06) need, defense, ball, year, start, offense, change, night, turnover, defensively, moving, trying
+    2 (+0.16) second, half, second half, quarter, second quarter, turnover, early, tonight, start, bench, halftime, end
+    3 (+0.09) quarter, night, fourth, ball, fourth quarter, player, important, best, year, court, help, offensive
+    4 (+0.10) year, change, ago, term, playoff, year ago, situation, day, player, adjustment, coach, win
+    5 (+0.11) night, defense, defensive, end, set, roll, pick, offensive, offense, shot, defensively, offensively
+    6 (+0.17) shot, throw, free, free throw, ball, line, night, shooting, hit, second, situation, end
+    7 (+0.07) sense, defensively, confidence, urgency, year, playoff, defense, defensive, adjustment, player, help, knowing
+    8 (+0.12) room, locker, locker room, coach, player, shot, thought, staff, basketball, minute, important, coaching
+    9 (+0.10) tonight, shot, quarter, end, minute, win, confidence, happened, half, offense, tough, mentioned
+   10 (+0.09) foul, trouble, challenge, foul trouble, overtime, help, present, happened, trying, situation, free, night
+   11 (+0.12) shot, conference, range, mid, final, year, ball, mid range, injury, press, player, film
+   12 (+0.10) night, tomorrow, win, tomorrow night, home, expect, situation, loss, chance, yesterday, confidence, hard
+   13 (+0.17) final, year, season, experience, nba, conference, moment, playoff, conference final, ago, nba final, group
+   14 (+0.11) day, today, injury, pain, practice, ready, need, physically, day day, court, mind, night
+   15 (+0.16) quarter, fourth, fourth quarter, minute, shot, tonight, end, moment, run, win, happened, stretch
+   16 (+0.06) tonight, performance, double, start, win, minute, paint, difference, defensively, wanted, defense, run
+   17 (+0.13) season, regular, regular season, playoff, lineup, level, starting, extra, postseason, day, court, bench
+   18 (+0.15) year, player, final, moment, championship, career, win, nba, playoff, season, run, teammate
+   19 (+0.13) home, road, court, year, home court, win, advantage, final, won, lost, playoff, experience
+   20 (+0.10) final, nba, player, win, nba final, history, fast, line, moment, night, ball, given

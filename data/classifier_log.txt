@@ -1,0 +1,59 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+C:\Users\travi\AppData\Local\Programs\Python\Python313\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\travi\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+units: superstar 1917, role 957, players 271
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5513.68it/s]
+  embedded 0/37670 chunks, 0 s
+  embedded 5120/37670 chunks, 35 s
+  embedded 10240/37670 chunks, 131 s
+  embedded 15360/37670 chunks, 264 s
+  embedded 20480/37670 chunks, 423 s
+  embedded 25600/37670 chunks, 634 s
+  embedded 30720/37670 chunks, 963 s
+  embedded 35840/37670 chunks, 1336 s
+  37670 chunks for 36826 answers (844 extra from long answers)
+  B1: AUC 0.646 (1579 s)
+  B2: AUC 0.713 (1580 s)
+  E1: AUC 0.536 (1581 s)
+  E2: AUC 0.752 (1936 s)
+C:\Users\travi\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py:782: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+  E2b: AUC 0.751 (4431 s)
+  E3: AUC 0.648 (4468 s)
+C:\Users\travi\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py:782: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+Step 11: classifiers, superstar vs role player press conferences (units), split grouped by player
+Units: superstar 1917, role 957; players 271 (tier changers kept in one fold). Game days: 1422 units, other days 1452.
+Median words per unit: superstar 670, role 423.
+5-fold CV grouped by player, stratified, 5 seeds. AUC = mean over seeds (range); 95% CI from 2000 player bootstrap resamples of seed 0.
+
+model name                              AUC           95% CI         seeds  bal.acc  game d.  other  w/in len           95% CI
+B1   Session and round only          0.646 [0.613, 0.682] [0.642-0.651]    0.629    0.525  0.526     0.642 [0.602, 0.682]
+B2   Length only                     0.713 [0.644, 0.755] [0.705-0.717]    0.661    0.653  0.768     0.551 [0.507, 0.597]
+E1   Pronoun rates only              0.536 [0.464, 0.613] [0.522-0.542]    0.532    0.516  0.517     0.579 [0.498, 0.647]
+E2   Bag of words                    0.752 [0.696, 0.809] [0.734-0.761]    0.698    0.699  0.753     0.693 [0.638, 0.744]
+E2b  Bag of words without I/we       0.751 [0.694, 0.807] [0.734-0.761]    0.697    0.698  0.751     0.692 [0.636, 0.743]
+E3   Sentence embeddings (MiniLM)    0.648 [0.590, 0.693] [0.643-0.655]    0.621    0.575  0.641     0.633 [0.577, 0.685]
+
+C chosen in each outer fold (seed 0): E2 0.3,0.1,0.3,0.3,0.03; E2b 0.3,0.1,0.3,0.3,0.03; E3 0.03,0.03,0.03,0.03,0.03
+
+Paired AUC differences (player bootstrap, seed 0), all units:
+  E2 - E2b: +0.001 [-0.001, +0.003]
+  E2 - E1: +0.214 [+0.114, +0.317]
+  E3 - E2: -0.112 [-0.157, -0.068]
+  E1 - B2: -0.160 [-0.270, -0.047]
+  E2 - B1: +0.109 [+0.051, +0.161]
+  E2 - B2: +0.054 [+0.007, +0.098]
+Within length fifths:
+  E2 - E2b: +0.001 [-0.002, +0.004]
+  E2 - E1: +0.115 [+0.036, +0.196]
+  E3 - E2: -0.058 [-0.102, -0.014]
+
+E2 refitted on all units (C = 0.1, 4590 words): highest weights
+  superstar: tonight +0.95, better +0.57, made +0.50, didn't +0.47, aggressive +0.46, missed +0.46, thought +0.45, quarter +0.45, did +0.41, matter +0.41, shots +0.39, ball +0.39, end +0.39, came +0.39, no +0.38, some +0.38, was +0.37, mean +0.37, second +0.36, got +0.36
+  role:      ready -0.40, the -0.36, to -0.36, and -0.32, role -0.27, it's -0.21, a -0.20, yeah -0.20, here -0.20, compete -0.18, staying -0.18, nba -0.17, crazy -0.16, prepared -0.16, leadership -0.15, in -0.14, perform -0.14, for -0.14, communicate -0.14, are -0.13
+  overlap with Fightin' Words top 20: superstar 14/20 (aggressive, ball, better, did, didn't, end, got, made, matter, missed, quarter, thought, tonight, was); role 9/20 (are, crazy, here, it's, nba, ready, role, staying, yeah)
+  I/we words: we'll +0.29 (rank 48), i'll +0.27 (rank 63), me +0.23 (rank 100), ourselves +0.22 (rank 105), our +0.22 (rank 106), i'm +0.20 (rank 131), we're +0.17 (rank 180), we've +0.15 (rank 227), myself +0.13 (rank 279), us +0.10 (rank 386), my +0.08 (rank 526), we +0.06 (rank 757), we'd +0.05 (rank 882), i've +0.04 (rank 1181), i'd +0.00 (rank 4386), mine -0.01 (rank 3890), ours -0.06 (rank 765), i -0.06 (rank 718)
+done in 4902 s

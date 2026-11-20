@@ -1,0 +1,86 @@
+Step 10 Fightin' Words: superstar vs role answers (Monroe, Colaresi & Quinn 2008, informative Dirichlet prior).
+Tokens after cleaning: superstar 1,357,819 / role 440,925 (in-vocabulary); vocabulary 2,347 words (>= 20 uses in the two groups, used by >= 10 players).
+Name words removed: 1095 (e.g. aaron, abdel, abdul, ad, adam, adams, adebayo, adelman, admiral, adreian, adrian, ainge, aj, al, alan, aldridge, alex, alexander, alfonzo, allen, alonzo, alston, alvarado, alvin, amar).
+Prior: 0.1 x each word's count in all player answers (role + starter + superstar).
+Words with |z| > 1.96: 473 of 2347 (194 superstar side, 279 role side).
+Player-level test: players with >= 500 words in that tier: superstar 71, role 169.
+
+Pronoun families (z > 0 = more superstar):
+  [I words]   superstar 43.3 / role 40.5 per 1,000 words, z = +6.49
+  [we words]  superstar 41.1 / role 39.5 per 1,000 words, z = +3.31
+Single pronouns:
+  i          z =  +6.38  rank 3 of 2347 from the superstar end  (28.12 vs 25.93 per 1,000)
+  me         z =  +1.22  rank 413 of 2347 from the superstar end  (4.30 vs 4.15 per 1,000)
+  my         z =  +0.23  rank 999 of 2347 from the superstar end  (4.17 vs 4.16 per 1,000)
+  mine       z =  -0.26  rank 1332 of 2347 from the superstar end  (0.04 vs 0.04 per 1,000)
+  myself     z =  +1.06  rank 483 of 2347 from the superstar end  (0.74 vs 0.68 per 1,000)
+  i'm        z =  +2.15  rank 151 of 2347 from the superstar end  (3.77 vs 3.47 per 1,000)
+  i've       z =  -0.01  rank 1169 of 2347 from the superstar end  (1.55 vs 1.55 per 1,000)
+  i'll       z =  +3.30  rank 58 of 2347 from the superstar end  (0.53 vs 0.38 per 1,000)
+  i'd        z =  -1.51  rank 1941 of 2347 from the superstar end  (0.08 vs 0.10 per 1,000)
+  we         z =  +4.40  rank 18 of 2347 from the superstar end  (23.47 vs 22.06 per 1,000)
+  us         z =  -0.56  rank 1514 of 2347 from the superstar end  (4.90 vs 4.97 per 1,000)
+  our        z =  +2.07  rank 166 of 2347 from the superstar end  (4.75 vs 4.40 per 1,000)
+  ours       z =  -1.87  rank 2047 of 2347 from the superstar end  (0.02 vs 0.05 per 1,000)
+  ourselves  z =  +1.48  rank 315 of 2347 from the superstar end  (0.53 vs 0.45 per 1,000)
+  we're      z =  -1.43  rank 1915 of 2347 from the superstar end  (3.69 vs 3.84 per 1,000)
+  we've      z =  -1.32  rank 1872 of 2347 from the superstar end  (2.75 vs 2.88 per 1,000)
+  we'll      z =  +1.46  rank 327 of 2347 from the superstar end  (0.94 vs 0.84 per 1,000)
+  we'd       z =  +0.35  rank 904 of 2347 from the superstar end  (0.06 vs 0.05 per 1,000)
+  you        z =  +3.34  rank 55 of 2347 from the superstar end  (13.32 vs 12.63 per 1,000)
+
+Top 20 SUPERSTAR words: z | per 1,000 words superstar vs role | players using | player medians superstar vs role, Mann-Whitney p | top player's share of uses
+  tonight        +11.67 |   1.51 vs   0.64 | 147 |  1.28 vs  0.00, p=0.000 | lebron james 16%
+  quarter         +7.06 |   0.98 vs   0.57 | 146 |  0.73 vs  0.00, p=0.000 | stephen curry 17%
+  i               +6.38 |  28.12 vs  25.93 | 279 | 28.33 vs 25.13, p=0.028 | lebron james 18%
+  thought         +6.23 |   0.90 vs   0.54 | 138 |  0.47 vs  0.00, p=0.000 | dirk nowitzki 13%
+  better          +5.93 |   2.70 vs   2.06 | 218 |  2.64 vs  1.43, p=0.000 | lebron james 15%
+  didn't          +5.75 |   2.11 vs   1.60 | 217 |  2.12 vs  1.27, p=0.000 | lebron james 14%
+  made            +5.73 |   1.41 vs   1.00 | 178 |  1.20 vs  0.62, p=0.000 | lebron james 16%
+  missed          +5.45 |   0.44 vs   0.22 | 109 |  0.40 vs  0.00, p=0.000 | lebron james 18%
+  was             +5.33 |   8.34 vs   7.40 | 264 |  7.71 vs  6.41, p=0.015 | lebron james 15%
+  aggressive      +5.07 |   1.00 vs   0.67 | 162 |  0.84 vs  0.24, p=0.000 | lebron james 10%
+  floor           +5.04 |   1.13 vs   0.81 | 163 |  0.67 vs  0.50, p=0.176 | lebron james 25%
+  fourth          +5.04 |   0.55 vs   0.33 | 117 |  0.32 vs  0.00, p=0.000 | lebron james 17%
+  matter          +5.02 |   0.79 vs   0.51 | 145 |  0.42 vs  0.00, p=0.003 | lebron james 24%
+  end             +4.87 |   1.34 vs   1.00 | 187 |  1.09 vs  0.69, p=0.000 | stephen curry 15%
+  did             +4.80 |   2.22 vs   1.77 | 221 |  2.05 vs  1.58, p=0.001 | lebron james 12%
+  ball            +4.66 |   2.55 vs   2.08 | 215 |  2.35 vs  1.57, p=0.005 | lebron james 14%
+  win             +4.55 |   3.07 vs   2.58 | 240 |  2.55 vs  2.30, p=0.223 | lebron james 14%
+  we              +4.40 |  23.47 vs  22.06 | 278 | 25.86 vs 21.83, p=0.002 | lebron james 13%
+  or              +4.35 |   3.14 vs   2.63 | 228 |  2.40 vs  2.08, p=0.024 | lebron james 19%
+  got             +4.29 |   6.31 vs   5.60 | 261 |  7.26 vs  5.12, p=0.000 | lebron james 11%
+
+Top 20 ROLE PLAYER words: z | per 1,000 words superstar vs role | players using | player medians superstar vs role, Mann-Whitney p | top player's share of uses
+  yeah           -10.78 |   1.92 vs   2.94 | 231 |  2.09 vs  1.97, p=0.945 | manu ginobili 5%
+  ready          -10.40 |   0.85 vs   1.56 | 217 |  0.80 vs  1.24, p=0.002 | tristan thompson 6%
+  here            -8.69 |   1.63 vs   2.39 | 235 |  1.62 vs  2.06, p=0.031 | andre iguodala 6%
+  just            -8.17 |  11.92 vs  13.66 | 281 | 12.64 vs 13.68, p=0.430 | andre iguodala 7%
+  being           -7.27 |   1.68 vs   2.31 | 224 |  1.43 vs  1.68, p=0.194 | andre iguodala 13%
+  it's            -6.83 |   8.75 vs  10.08 | 273 |  8.58 vs  9.13, p=0.100 | andre iguodala 6%
+  role            -6.62 |   0.15 vs   0.36 | 107 |  0.06 vs  0.00, p=0.783 | andre iguodala 9%
+  staying         -6.33 |   0.13 vs   0.30 | 101 |  0.08 vs  0.00, p=0.067 | bobby portis 7%
+  guys            -5.86 |   3.25 vs   3.96 | 254 |  3.00 vs  3.36, p=0.227 | andre iguodala 10%
+  are             -5.71 |   2.93 vs   3.56 | 241 |  2.80 vs  2.91, p=0.912 | manu ginobili 15%
+  nba             -5.47 |   0.44 vs   0.71 | 153 |  0.33 vs  0.36, p=0.995 | manu ginobili 6%
+  really          -5.46 |   3.42 vs   4.08 | 245 |  3.01 vs  2.95, p=0.621 | andre iguodala 11%
+  grateful        -5.44 |   0.05 vs   0.15 |  44 |  0.00 vs  0.00, p=0.008 | russell westbrook 20%
+  been            -5.30 |   3.52 vs   4.18 | 253 |  3.42 vs  3.55, p=0.258 | andre iguodala 9%
+  think           -5.05 |   6.68 vs   7.47 | 264 |  7.13 vs  6.86, p=0.423 | andre iguodala 5%
+  crazy           -5.02 |   0.17 vs   0.32 | 103 |  0.10 vs  0.00, p=0.125 | gary payton 8%
+  stay            -4.92 |   0.60 vs   0.85 | 174 |  0.55 vs  0.44, p=0.419 | andre iguodala 5%
+  culture         -4.84 |   0.03 vs   0.09 |  27 |  0.00 vs  0.00, p=0.016 | andre iguodala 46%
+  hard            -4.82 |   1.22 vs   1.59 | 215 |  0.99 vs  1.29, p=0.948 | manu ginobili 11%
+  players         -4.73 |   0.62 vs   0.87 | 185 |  0.57 vs  0.62, p=0.578 | manu ginobili 7%
+
+Top-20 overlap with other priors (superstar list, role list):
+  prior 0.01 x background: (20, 19)
+  prior 1 x background: (17, 17)
+
+Within session (superstars do more post-game interviews; this separates session from status):
+  GAME DAYS: tokens superstar 753,062 / role 149,391; vocabulary 1,649; |z| > 1.96: 202. I words z = -2.07, we words z = +2.87, i z = +0.93, we z = +0.50
+    superstar: tonight +4.9, well +4.5, quarter +4.4, some +4.1, thought +4.0, missed +3.9, our +3.6, offensive +3.4, defense +3.3, six +3.2, better +3.1, will +3.0, fourth +2.9, turnovers +2.9, great +2.9
+    role:      just -6.6, yeah -6.1, ready -5.1, grateful -4.7, sacrifice -4.4, feel -4.3, nba -4.1, everybody -4.1, today -4.1, hard -3.9, storm -3.9, smaller -3.9, world -3.9, role -3.8, gym -3.8
+  NON-GAME DAYS: tokens superstar 591,169 / role 286,855; vocabulary 1,681; |z| > 1.96: 311. I words z = +11.12, we words z = -3.37, i z = +7.21, we z = -0.34
+    superstar: i +7.2, or +5.6, i'm +5.4, do +5.2, don't +5.1, whatever +4.7, better +4.5, it +4.5, about +4.4, matter +4.4, you +4.4, me +4.3, aggressive +4.2, doesn't +4.1, worry +4.1
+    role:      ready -8.2, yeah -7.9, just -6.4, here -6.3, staying -5.8, guys -5.2, role -5.1, they're -4.9, being -4.8, locked -4.7, them -4.5, their -4.4, bubble -4.3, lot -4.0, for -4.0

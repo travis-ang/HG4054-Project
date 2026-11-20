@@ -1,0 +1,48 @@
+Player answers in playoff rounds: 37,017  (players: 416)
+Matched to an NBA player id: 99.5% of answers
+Have regular-season starts (tier known): 99.5% of answers
+Game-day answers (team played that day): 16,496 (44.6%); of ASAP 'postgame' answers matched to a game: 99.1%
+
+Answers / players by tier:
+           answers  players
+tier                       
+role          6637      211
+starter      12006      187
+superstar    18183       75
+unknown        191       40
+
+Units (player x press conference) by tier and game day:
+game_day     0     1
+tier                
+role       655   302
+starter    889   676
+superstar  797  1120
+unknown     59     0
+
+Unmatched speakers with most answers (no NBA id or no starts):
+person
+J.B. Bickerstaff      26
+Bill Fitch            14
+Frank Layden          14
+Al Attles              9
+David Fogel            9
+Ettore Messina         8
+Brazilian Reporter     8
+Joe Dumars             8
+Vince Cellini          8
+Joe Borgia             8
+Paul Westhead          7
+Doug Moe               7
+Dr. Jack Ramsay        7
+Bruce Fraser           4
+Larry Jones            4
+Chris Winter           4
+Tex Winter             4
+Michael Goldberg       4
+Rod Thorn              4
+Raymond Ridder         4
+Billy Hunter           3
+Dan Patrick            3
+Shane Battier          2
+Ky Randle              2
+Kip Jones              2

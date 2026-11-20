@@ -1,0 +1,17 @@
+What reporters ask each tier: LDA topic shares of the questions (K = 10), superstar − role player
+Units 4,425; players 377; SEs clustered by player; adjusted = + round and game day.
+Share of each tier's units at the Finals: role 0.62, starter 0.55, superstar 0.47; on game days: role 0.32, starter 0.43, superstar 0.58
+
+topic                                role starter  super   raw gap (pp) [95% CI]     adjusted gap (pp) [95% CI]  holds
+Individual performance                9.1    11.6   13.6    +4.5 [ +2.9,  +6.2]       +0.1 [ -1.3,  +1.6]        no
+Shooting and free throws             10.1    11.7   13.8    +3.7 [ +2.2,  +5.3]       +2.1 [ +0.6,  +3.5]        yes
+Fourth quarter and closing            5.9     6.2    7.9    +2.0 [ +0.8,  +3.2]       +0.2 [ -1.0,  +1.3]        no
+First half: fouls and turnovers       7.7     8.8    9.1    +1.4 [ -0.2,  +3.0]       -0.8 [ -2.3,  +0.6]        no
+Season and playoff run               12.0    12.3   12.5    +0.4 [ -1.2,  +2.0]       +1.9 [ +0.3,  +3.5]        yes
+Pressure and mindset                  6.9     7.1    5.9    -1.1 [ -2.4,  +0.2]       -0.5 [ -1.8,  +0.8]        no
+Home court and the series             9.0     8.5    7.5    -1.6 [ -2.9,  -0.2]       +0.4 [ -0.9,  +1.8]        no
+Tactics and adjustments              14.2    14.6   12.3    -2.0 [ -4.1,  +0.2]       +0.4 [ -1.6,  +2.3]        no
+Championship and legacy              13.7     9.7   10.3    -3.4 [ -5.4,  -1.4]       -1.9 [ -3.8,  -0.0]        yes
+The Finals stage                     11.4     9.4    7.3    -4.1 [ -6.1,  -2.0]       -1.8 [ -3.7,  +0.1]        no
+
+3 of 10 adjusted gaps exclude zero (10 tests, no correction; descriptive).

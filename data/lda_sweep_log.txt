@@ -1,0 +1,13 @@
+K = 5: NPMI coherence 0.138  diversity 0.71  seed stability 0.81
+K = 8: NPMI coherence 0.125  diversity 0.58  seed stability 0.77
+K = 10: NPMI coherence 0.134  diversity 0.53  seed stability 0.74
+K = 12: NPMI coherence 0.132  diversity 0.51  seed stability 0.71
+K = 15: NPMI coherence 0.106  diversity 0.49  seed stability 0.68
+K = 20: NPMI coherence 0.114  diversity 0.47  seed stability 0.65
+ K  npmi  diversity  stability
+ 5 0.138      0.712      0.808
+ 8 0.125      0.585      0.765
+10 0.134      0.532      0.736
+12 0.132      0.513      0.706
+15 0.106      0.493      0.677
+20 0.114      0.470      0.655

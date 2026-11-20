@@ -1,0 +1,15 @@
+family,cluster,name,side,note
+i,1,Own actions and past play (I in a clause: when I / I was / I had),self,mostly the speaker's own shots and choices; some plans and feelings mixed in
+i,2,"My / myself / me: my career, my family, my role",self,possessive and object uses; some "my teammates" (others via my)
+i,3,"Short personal replies: my body, my routine, I'll",self,"injuries, routine, plans; some ""I don't know"" mixed in"
+i,4,I think + a statement about the team or game,neither,opinion marker; the content is mostly about the team (I think we...)
+i,5,"Sentence-start fillers: I mean, I guess, I don't know",neither,hedges and filler
+i,6,Like I said / as I said,neither,discourse marker
+we,1,"Our best, what we can do (team standards)",team,
+we,2,What we did in the game (past narration),team,
+we,3,"What we have to do (plans, obligations)",team,
+we,4,"Results and record (we won, we lost, our first...)",team,
+we,5,"How we play (habits, identity)",team,
+we,6,"Relationships, pairs, personal we (us two, our first child)",neither,"mixed: holds 5 of the 10 non-team uses in the Step 12 check"
+we,7,"Members of the group (our team, our guys, our trainers)",team,"some ""our league"""
+we,8,"We know, we feel, we believe (shared view)",team,

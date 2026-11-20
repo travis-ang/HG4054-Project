@@ -1,0 +1,54 @@
+Human check of the BERT training labels (Step 23): Travis, blind, first pass, 100 random uses
+
+Travis vs training labels (AI coder), "i" (47): 66% (31/47), kappa 0.43
+training labels (AI coder)  neither  self  team
+Travis                                         
+neither                          12     3     0
+self                              5    18     0
+team                              5     3     1
+
+Travis vs training labels (AI coder), "we" (53): 92% (49/53), kappa 0.46
+training labels (AI coder)  not_team  team
+Travis                                    
+not_team                           2     2
+team                               2    47
+
+Travis vs Claude, "i" (47): 68% (32/47), kappa 0.47
+Claude   neither  self  team
+Travis                      
+neither       12     3     0
+self           5    18     0
+team           5     2     2
+
+Travis vs Claude, "we" (53): 94% (50/53), kappa 0.54
+Claude    not_team  team
+Travis                  
+not_team         2     2
+team             1    48
+
+Travis vs second AI coder, "i" (47): 66% (31/47), kappa 0.43
+second AI coder  neither  self  team
+Travis                              
+neither               12     3     0
+self                   5    18     0
+team                   5     3     1
+
+Travis vs second AI coder, "we" (53): 92% (49/53), kappa 0.46
+second AI coder  not_team  team
+Travis                         
+not_team                2     2
+team                    2    47
+
+Classifier rebuilt as in Step 17 (macro-F1 0.776, random-part accuracy 0.897: matches).
+Travis vs classifier (held-out players), "I" (47): 62% (29/47), kappa 0.37
+classifier  neither  self  team
+Travis                         
+neither          12     3     0
+self              6    16     1
+team              5     3     1
+Uses both call self or team: 17/21 agree.
+
+"I" labels on these 47: Travis {'self': 23, 'neither': 15, 'team': 9}; training labels {'self': 24, 'neither': 22, 'team': 1}; classifier {'neither': 23, 'self': 22, 'team': 2}
+"we": Travis team 49 of 53 (92%); the rule every "we" = team agrees on the same share
+
+"I" disagreements with the training labels (lid: Travis / training): 9: team / self, 10: neither / self, 41: team / self, 53: team / neither, 74: team / self, 90: self / neither, 127: self / neither, 130: neither / self, 133: team / neither, 212: team / neither, 215: neither / self, 235: team / neither, 240: self / neither, 310: team / neither, 318: self / neither, 347: self / neither

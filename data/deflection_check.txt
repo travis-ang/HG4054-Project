@@ -1,0 +1,27 @@
+Exploratory check (18 Nov, after the freeze; descriptive only, not in any model).
+
+How often does an "I" word sit inside a phrase that pushes credit away from the speaker,
+such as "it's not about me", "it's not just me", "it is not me at the forefront"?
+Pronoun counting scores these as self-focus although they mean the opposite.
+
+Run: cd scripts && python deflection_check.py  ->  data/deflection_check.txt
+
+Pattern: \b(?:it|this|that)(?:'s| is| was)? (?:not|n't|never|isn't|wasn't)\s*(?:about|on|all about|just about)\s+(me|myself)\b|\b(?:it|this)(?:'s| is| was) not me\b|\bnot (?:just |only )?me\b
+
+           answers  i_words  deflecting  per_1000_I
+tier                                               
+role          6637    17849          15        0.84
+starter      12006    34665          36        1.04
+superstar    18183    58764          62        1.06
+
+All tiers: 113 deflecting uses out of 111278 'I' words (1.02 per 1,000).
+
+Examples (random, seed 1):
+- role, Tyler Herro 2020: ...Yeah, I think it hurts our team a lot, not just me. Obviously, I've been playing with Gora...
+- superstar, LeBron James 2015: ...ate a little bit more defensively to help our team get over the hump. It's not about me. It's not about the next guy. It's abou...
+- superstar, Jimmy Butler 2020: ...ieve in my skill set and my talent. My teammates do as well. But it's not just me, Duncan had a hell of a game, K-Nunn ca...
+- superstar, Jimmy Butler 2020: ... will be Tyler; he's done it countless amounts of times, or Jae. It's not just me who does that. It's everybody on this t...
+- role, Andre Iguodala 2016: ...munication is key defensively when you're guarding players like that. It's not me stopping him; it's us as a team trying ...
+- superstar, LeBron James 2018: ...e saying I got criticized for something, right? I don't believe that. Not me (Smiling). I don't care. I don't care a...
+- starter, Draymond Green 2019: ... have to lift my teammates up. However, guys lift me up as well. It's not just me lifting everybody else up. Guys lift me...
+- role, Russell Westbrook 2023: ...at I love it here. I love the people, just the fans overall embracing not just me but my family and close friends. I know...

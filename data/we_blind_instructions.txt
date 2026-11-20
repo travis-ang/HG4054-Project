@@ -1,0 +1,12 @@
+How to code data/we_blind.csv (90 uses of "we", shuffled; tier and player hidden)
+
+Read the context column: the sentence with the marked [[we]] word and the sentence before it.
+If it is unclear, read full_answer. Put exactly one of these codes in the code column:
+
+  team: the player's team (players, or players with coaches and staff)
+  wider: a wider group that includes the team (organisation, city and fans, the team over several seasons)
+  other_group: a smaller or different group: a pair of teammates, travel companions, the league's players, a generation
+  generic: generic or fixed phrase, no clear group (we'll see, as we know)
+
+my_note is optional. Do not open we_sample.csv or we_blind_key.csv until you have finished.
+Save as CSV with the same name, then run: cd scripts && python we_sample.py agree

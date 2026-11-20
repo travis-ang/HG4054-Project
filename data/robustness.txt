@@ -1,0 +1,71 @@
+Step 9 robustness. Superstar minus role player in adjusted we-share (model A, all controls unless noted).
+10 most-interviewed players: lebron james, stephen curry, draymond green, dwyane wade, klay thompson, kevin durant, tim duncan, tony parker, manu ginobili, kobe bryant
+
+[Main] Main result (model A, all controls)
+   units 4420 (superstar 1903, starter 1561, role 956), players 377
+   role/rest 0.511, superstar 0.507; diff -0.4 pp [-3.9, +3.0], OR 0.98, p = 0.818
+[Status definition] Superstar = All-NBA that season
+   units 4420 (superstar 1465, starter 2002, role 953), players 377
+   role/rest 0.512, superstar 0.503; diff -0.9 pp [-4.9, +3.1], OR 0.96, p = 0.650
+[Status definition] All-NBA, same player (fixed effects)
+   units 4410 (superstar 1465, starter 2002, role 943), players 368
+   role/rest 0.513, superstar 0.512; diff -0.1 pp [-5.4, +5.2], OR 0.99, p = 0.965
+[Status definition] Two groups: superstar vs everyone else
+   units 4420 (superstar 1903, starter 1561, role 956), players 377
+   role/rest 0.508, superstar 0.507; diff -0.2 pp [-3.2, +2.9], OR 0.99, p = 0.924
+[Status definition] Role players who were never All-Stars
+   units 4147 (superstar 1903, starter 1561, role 683), players 360
+   role/rest 0.506, superstar 0.507; diff +0.1 pp [-3.6, +3.8], OR 1.00, p = 0.953
+[Which press conferences] Game days only
+   units 2084 (superstar 1108, starter 674, role 302), players 279
+   role/rest 0.498, superstar 0.547; diff +4.9 pp [+0.4, +9.4], OR 1.23, p = 0.033
+[Which press conferences] Non-game days only
+   units 2335 (superstar 794, starter 887, role 654), players 320
+   role/rest 0.506, superstar 0.470; diff -3.6 pp [-7.4, +0.2], OR 0.86, p = 0.064
+[Which press conferences] Game days, same player (fixed effects)
+   units 2080 (superstar 1108, starter 673, role 299), players 275
+   role/rest 0.511, superstar 0.536; diff +2.4 pp [-6.0, +10.9], OR 1.11, p = 0.569
+[Which press conferences] Non-game days, same player (fixed effects)
+   units 2328 (superstar 794, starter 887, role 647), players 313
+   role/rest 0.505, superstar 0.490; diff -1.5 pp [-7.0, +4.1], OR 0.94, p = 0.602
+[Which press conferences] NBA Finals only
+   units 2354 (superstar 903, starter 854, role 597), players 248
+   role/rest 0.491, superstar 0.460; diff -3.1 pp [-7.7, +1.5], OR 0.88, p = 0.187
+[Which players] Without LeBron James
+   units 4218 (superstar 1701, starter 1561, role 956), players 376
+   role/rest 0.513, superstar 0.521; diff +0.9 pp [-2.0, +3.7], OR 1.04, p = 0.557
+[Which players] Without the 10 most-interviewed players
+   units 3343 (superstar 986, starter 1457, role 900), players 367
+   role/rest 0.511, superstar 0.517; diff +0.6 pp [-2.1, +3.4], OR 1.03, p = 0.645
+[Model set-up] Question topics from LDA with K = 5
+   units 4420 (superstar 1903, starter 1561, role 956), players 377
+   role/rest 0.510, superstar 0.507; diff -0.3 pp [-3.7, +3.2], OR 0.99, p = 0.877
+[Model set-up] Each unit weighted equally (linear model)
+   units 4420 (superstar 1903, starter 1561, role 956), players 377
+   diff +0.1 pp [-2.9, +3.1], p = 0.942
+[Model set-up] Season fixed effects (era)
+   units 4420 (superstar 1903, starter 1561, role 956), players 377
+   role/rest 0.513, superstar 0.503; diff -1.0 pp [-4.5, +2.5], OR 0.96, p = 0.580
+
+Follow-up (added after the game-day check): one model with tier x game day
+Game days: points and minutes above the player's own playoff average that season, mean by tier:
+              pts_rel_gd  min_rel_gd
+   tier                             
+   role             5.24        4.77
+   starter          2.33        1.57
+   superstar        0.94        0.88
+Tier x game day, all controls: units 4420, players 377
+   superstar vs role, non-game days     OR 0.86 [0.73, 1.02], p = 0.077
+   superstar vs role, game days         OR 1.23 [1.02, 1.49], p = 0.029
+   difference (interaction)             OR 1.43 [1.17, 1.74], p = 0.001
+   joint test of both tier x game-day terms: chi2 = 12.62, df = 2, p = 0.002
+Tier x game day, same player (fixed effects): units 4410, players 368
+   superstar vs role, non-game days     OR 0.89 [0.72, 1.10], p = 0.287
+   superstar vs role, game days         OR 1.22 [0.96, 1.56], p = 0.107
+   difference (interaction)             OR 1.37 [1.14, 1.65], p = 0.001
+   joint test of both tier x game-day terms: chi2 = 12.90, df = 2, p = 0.002
+Tier x game day, + points and minutes relative to own average: units 4420, players 377
+   superstar vs role, non-game days     OR 0.86 [0.73, 1.02], p = 0.076
+   superstar vs role, game days         OR 1.17 [0.92, 1.49], p = 0.191
+   difference (interaction)             OR 1.36 [1.05, 1.76], p = 0.021
+   joint test of both tier x game-day terms: chi2 = 6.11, df = 2, p = 0.047

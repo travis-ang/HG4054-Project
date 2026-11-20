@@ -1,0 +1,37 @@
+# Public repository: keep out copyrighted text, unlicensed images, large binaries and caches.
+
+# ASAP Sports transcripts: raw pages and every table that holds their full text
+data/raw_html/
+data/asap_nba_answers.csv
+data/answers_analysis.csv
+data/answers_labeled.csv
+data/units.csv
+
+# NBA.com player headshots (not licensed for publishing)
+presentation/public/img/players/
+
+# Raw downloads (rebuilt by fetch_nba_stats.py and fetch_labels.py)
+data/raw_nba/
+data/raw_wiki/
+
+# Embedding caches (rebuilt by bert_pronouns.py embed and classifiers.py; the BERT one is 337 MB)
+*.npy
+
+# Dated local snapshots (zips of everything above)
+snapshots/
+
+# The create-next-app starter repo, renamed so the deck is tracked here
+presentation/.git-create-next-app/
+
+# Python, notebooks, editors, OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

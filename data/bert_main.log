@@ -1,0 +1,69 @@
+                               effect      diff        lo        hi     n
+0            Superstar vs role player -0.004750 -0.045286  0.035786  4415
+1             Won vs lost (game days) -0.090907 -0.118422 -0.063393  2081
+2       +10 points scored (game days) -0.024584 -0.038846 -0.010322  2081
+3  +10 'you' per 1,000 question words -0.042659 -0.047105 -0.038214  4415
+4     Conference finals vs NBA Finals  0.038410  0.017996  0.058823  4415
+Step 18: main measure = share of team-focused pronouns (BERT sides), (team "I" + all "we") / (self "I" + team "I" + all "we"); conversational "I" left out.
+Units with any self- or team-side pronoun: 4,415 of 4,425; players 377
+
+Check: model A on the swapped units reproduces Step 17 exactly: superstar minus role -0.48 pp [-4.53, +3.58]
+Adjusted share by tier (all controls): role 0.650 [0.628, 0.671], starter 0.656 [0.637, 0.674], superstar 0.645 [0.609, 0.681]
+
+Unit share: mean 0.671, SD 0.247 (24.7 points) over 4,415 units
+Pooled game-day share: after losses 0.731, after wins 0.603
+Raw unit means by tier: role 0.661, starter 0.683, superstar 0.666
+
+Situation effects (average marginal effects, percentage points of the share, 95% CI):
+   Superstar vs role player                 -0.5 [-4.5, +3.6]  (n 4415)
+   Won vs lost (game days)                  -9.1 [-11.8, -6.3]  (n 2081)
+   +10 points scored (game days)            -2.5 [-3.9, -1.0]  (n 2081)
+   +10 'you' per 1,000 question words       -4.3 [-4.7, -3.8]  (n 4415)
+   Conference finals vs NBA Finals          +3.8 [+1.8, +5.9]  (n 4415)
+
+Robustness (superstar minus role, model A all controls unless noted):
+10 most-interviewed players: lebron james, stephen curry, draymond green, dwyane wade, klay thompson, kevin durant, tim duncan, tony parker, manu ginobili, kobe bryant
+[Main] Main result (model A, all controls): units 4415, players 377; role/rest 0.650, superstar 0.645; diff -0.5 pp [-4.5, +3.6], p = 0.818
+[Measure] Counting words instead (the plain we-share): units 4415, players 377; role/rest 0.511, superstar 0.507; diff -0.4 pp [-3.9, +3.0], p = 0.817
+[Status definition] Superstar = All-NBA that season: units 4415, players 377; role/rest 0.651, superstar 0.638; diff -1.3 pp [-6.1, +3.4], p = 0.580
+[Status definition] All-NBA, same player (fixed effects): units 4398, players 361; role/rest 0.656, superstar 0.650; diff -0.6 pp [-6.8, +5.5], p = 0.841
+[Status definition] Two groups: superstar vs everyone else: units 4415, players 377; role/rest 0.654, superstar 0.645; diff -0.9 pp [-4.6, +2.8], p = 0.640
+[Status definition] Role players who were never All-Stars: units 4143, players 360; role/rest 0.646, superstar 0.645; diff -0.1 pp [-4.3, +4.2], p = 0.976
+[Which press conferences] Game days only: units 2081, players 279; role/rest 0.624, superstar 0.686; diff +6.2 pp [+1.5, +10.9], p = 0.009
+[Which press conferences] Non-game days only: units 2333, players 320; role/rest 0.653, superstar 0.607; diff -4.7 pp [-9.4, +0.1], p = 0.052
+[Which press conferences] Game days, same player (fixed effects): units 2064, players 264; role/rest 0.634, superstar 0.677; diff +4.2 pp [-6.5, +14.9], p = 0.432
+[Which press conferences] Non-game days, same player (fixed effects): units 2321, players 308; role/rest 0.648, superstar 0.643; diff -0.5 pp [-6.0, +5.0], p = 0.852
+[Which press conferences] NBA Finals only: units 2351, players 248; role/rest 0.628, superstar 0.593; diff -3.5 pp [-8.9, +1.9], p = 0.199
+[Which players] Without LeBron James: units 4213, players 376; role/rest 0.652, superstar 0.665; diff +1.3 pp [-1.6, +4.2], p = 0.377
+[Which players] Without the 10 most-interviewed players: units 3338, players 367; role/rest 0.653, superstar 0.669; diff +1.6 pp [-1.5, +4.7], p = 0.310
+[Model set-up] Question topics from LDA with K = 5: units 4415, players 377; role/rest 0.648, superstar 0.645; diff -0.3 pp [-4.4, +3.7], p = 0.867
+[Model set-up] Each unit weighted equally (linear model): units 4415, players 377; diff +0.6 pp [-2.8, +4.0], p = 0.736
+[Model set-up] Season fixed effects (era): units 4415, players 377; role/rest 0.652, superstar 0.644; diff -0.8 pp [-4.8, +3.1], p = 0.677
+Checks that include zero: 13 of 14 (the plain we-share row not counted)
+
+Follow-up: one model with tier x game day
+Game days: points and minutes above the player's own playoff average that season, mean by tier:
+              pts_rel_gd  min_rel_gd
+   tier                             
+   role             5.29        4.80
+   starter          2.34        1.58
+   superstar        0.94        0.88
+Tier x game day, all controls: units 4415, players 377
+   superstar vs role, non-game days     OR 0.81 [0.65, 1.01], p = 0.064
+   superstar vs role, game days         OR 1.35 [1.08, 1.69], p = 0.008
+   difference (interaction)             OR 1.66 [1.29, 2.15], p = 0.000
+   joint test of both tier x game-day terms: chi2 = 16.05, df = 2, p = 0.000
+Tier x game day, same player (fixed effects): units 4398, players 361
+   superstar vs role, non-game days     OR 0.86 [0.66, 1.12], p = 0.259
+   superstar vs role, game days         OR 1.37 [1.00, 1.89], p = 0.050
+   difference (interaction)             OR 1.60 [1.27, 2.02], p = 0.000
+   joint test of both tier x game-day terms: chi2 = 16.71, df = 2, p = 0.000
+Tier x game day, + points and minutes relative to own average: units 4415, players 377
+   superstar vs role, non-game days     OR 0.81 [0.65, 1.01], p = 0.063
+   superstar vs role, game days         OR 1.29 [0.97, 1.71], p = 0.084
+   difference (interaction)             OR 1.58 [1.11, 2.26], p = 0.012
+   joint test of both tier x game-day terms: chi2 = 7.32, df = 2, p = 0.026
+
+Poisson, self "I" per 1,000 words: role 22.9, starter 23.5, superstar 23.9; superstar / role rate ratio 1.04 [0.87, 1.25], p = 0.635
+Poisson, team side per 1,000 words: role 41.5, starter 43.3, superstar 42.2; superstar / role rate ratio 1.02 [0.94, 1.09], p = 0.673
+

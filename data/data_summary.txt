@@ -1,0 +1,138 @@
+ASAP Sports NBA playoff transcripts: data summary
+
+Interviews: 6,321
+Answer rows: 60,322
+Distinct speaker labels: 574
+Total answer words: 4,825,643
+Median words per answer: 71
+Years covered: 2004 to 2026
+
+Interviews by year and round
+round  conference_finals  conference_semifinals  finals  first_round  nba_cup  play_in  regular_season_special
+year                                                                                                          
+2004                   0                      0      63            0        0        0                       0
+2005                 161                      0     121            0        0        0                       0
+2006                 140                      0      92            0        0        0                       0
+2007                 142                      0      91            0        0        0                       0
+2008                 124                      0     118            0        0        0                       0
+2009                 139                      0     119            0        0        0                       0
+2010                 171                      0     143            0        0        0                       5
+2011                 119                      0     138            0        0        0                       0
+2012                 140                      0     115            0        0        0                       0
+2013                 148                     12     152            4        0        0                       0
+2014                 175                     16     114           17        0        0                       0
+2015                  95                     28     117           28        0        0                       0
+2016                 155                     15     164           31        0        0                       0
+2017                 122                     11     127           28        0        0                       1
+2018                 177                     15     104           22        0        0                       0
+2019                 123                     19     155           38        0        0                       2
+2020                 135                      0     107            0        0        0                       1
+2021                 154                      0     141            0        0        0                       0
+2022                 125                     27     208           27        0       20                       0
+2023                 110                     24     172           42       40        0                       1
+2024                   0                      0     172            0       34        0                       2
+2025                   0                     18     195           30       42        0                       1
+2026                   0                      0     136            0        0        0                       1
+
+Answer rows by round
+round
+finals                    28453
+conference_finals         25838
+first_round                2706
+conference_semifinals      1954
+nba_cup                     997
+play_in                     192
+regular_season_special      182
+
+Answer rows by session type
+session
+practice             27835
+postgame_probable    18746
+postgame             10087
+pregame               1993
+unknown               1661
+
+Top 40 speakers by number of answers
+speaker
+LEBRON JAMES            2485
+STEVE KERR              2091
+COACH ERIK SPOELSTRA    1248
+DRAYMOND GREEN          1187
+TYRONN LUE              1174
+STEPHEN CURRY           1100
+KOBE BRYANT             1044
+DWYANE WADE             1014
+KEVIN DURANT             885
+KLAY THOMPSON            884
+DOC RIVERS               759
+TIM DUNCAN               651
+TONY PARKER              631
+COACH GREGG POPOVICH     627
+ERIK SPOELSTRA           604
+COACH KERR               604
+COACH JACKSON            571
+COACH DOC RIVERS         554
+MIKE BUDENHOLZER         518
+COACH BROWN              514
+PHIL JACKSON             511
+MANU GINOBILI            485
+BRAD STEVENS             478
+COACH POPOVICH           476
+STEPH CURRY              461
+GREGG POPOVICH           443
+CHRIS BOSH               440
+CHRIS PAUL               427
+DWIGHT HOWARD            405
+CHAUNCEY BILLUPS         401
+PAU GASOL                398
+JAYSON TATUM             393
+JIMMY BUTLER             392
+THE MODERATOR            385
+COACH FRANK VOGEL        372
+JAYLEN BROWN             371
+MONTY WILLIAMS           370
+PAUL PIERCE              370
+IME UDOKA                365
+RUSSELL WESTBROOK        362
+
+Quality checks
+  Moderator rows: 427
+  Rows labelled 'COACH ...': 8,467
+  Answers containing leftover site footer text: 0
+  Rows whose speaker is not in the header list: 5,043
+  Empty answers: 1
+  Answers with no preceding question (opening statements): 1,112
+  Rows with leftover mojibake characters: 0
+
+Most common speaker labels not found in the header (check these):
+speaker
+COACH KERR             604
+COACH JACKSON          571
+COACH BROWN            514
+COACH POPOVICH         476
+THE MODERATOR          385
+COACH BLATT            321
+COACH LUE              307
+COACH RIVERS           204
+COACH BROOKS           177
+COACH SAUNDERS         156
+COACH D'ANTONI         138
+COACH VAN GUNDY        123
+COACH GENTRY           105
+COACH KARL              86
+MATTHEW DELLAVEDOVA     82
+COACH SPOELSTRA         81
+COACH BUDENHOLZER       78
+STEPH CURRY             77
+RIP HAMILTON            72
+AMARE STOUDEMIRE        64
+MODERATOR               42
+COMMISSIONER SILVER     27
+KEVIN DURANT            24
+STUART SCOTT            24
+COACH JOERGER           18
+COACH WILLIAMS          18
+RICK CARLISLE           16
+PAU GASOL               16
+MICHAEL PORTER JR       16
+ANDRE IGUODALA          14

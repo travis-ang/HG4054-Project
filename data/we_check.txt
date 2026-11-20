@@ -1,0 +1,24 @@
+Step 12: what does "we" refer to? 30 random uses per tier, one per player, read by hand
+
+  team: the player's team (players, or players with coaches and staff)
+  wider: a wider group that includes the team (organisation, city and fans, the team over several seasons)
+  other_group: a smaller or different group: a pair of teammates, travel companions, the league's players, a generation
+  generic: generic or fixed phrase, no clear group (we'll see, as we know)
+
+referent   team  wider  other_group  generic   n  team_or_wider_%
+tier                                                             
+role         26      0            3        1  30             87.0
+starter      27      0            2        1  30             90.0
+superstar    27      0            2        1  30             90.0
+
+Not the team (other_group or generic):
+  [role] Kevin Love (2023): other_group - people on a trip to Brazil (off-season travel)
+  [role] Richard Jefferson (2017): other_group - "our generation" of players
+  [role] James Jones (2011): other_group - a pair: himself and Udonis Haslem (hometown question)
+  [role] Jordan Clarkson (2018): generic - general statement; he joined the team mid-season, so "this summer" is not the team
+  [starter] J.R. Smith (2018): other_group - a pair: himself and LeBron James (are we good?)
+  [starter] Kevin Love (2016): other_group - the league's players (concussion protocol protects us)
+  [starter] Timofey Mozgov (2015): generic - fixed phrase: we're going to see
+  [superstar] Blake Griffin (2015): other_group - a pair: himself and Chris Paul, then he widens it to the team
+  [superstar] Dwight Howard (2009): generic - everyone, including reporters (we've all seen him)
+  [superstar] Dwyane Wade (2014): other_group - himself and the team's staff (his personal rest plan)

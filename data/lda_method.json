@@ -1,0 +1,901 @@
+{
+ "corpus": {
+  "docs": 4425,
+  "terms": 3263,
+  "bigrams": 1110,
+  "tokens_kept": 227266,
+  "question_words": 1043235,
+  "median_kept": 46.0,
+  "names_removed": 946,
+  "too_common": [
+   "team"
+  ],
+  "nonzero_share": 0.01345813616459845
+ },
+ "example": {
+  "person": "LeBron James",
+  "season": 2016,
+  "round": "conference_finals",
+  "date": "May 27, 2016",
+  "game_day": 1,
+  "won": 1,
+  "n_questions": 10,
+  "q_words": 440,
+  "kept": 86,
+  "distinct": 69,
+  "theta": [
+   0.2637,
+   0.0011,
+   0.0011,
+   0.6617,
+   0.0011,
+   0.0011,
+   0.0011,
+   0.0011,
+   0.0665,
+   0.0011
+  ],
+  "tokens": [
+   {
+    "t": "LeBron",
+    "why": "name word"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "as",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "you",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "know",
+    "why": "spoken filler"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "you've",
+    "why": "contraction"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "fought",
+    "why": "kept",
+    "term": "fought",
+    "topic": 1,
+    "p": 0.965
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "against",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "this",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "idea",
+    "why": "kept",
+    "term": "idea",
+    "topic": 4,
+    "p": 0.901
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "all",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "year",
+    "why": "kept",
+    "term": "year",
+    "topic": 4,
+    "p": 0.601
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "that",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "the",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "Cavs",
+    "why": "name word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "were",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "preordained",
+    "why": "min_df"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "to",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "be",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "in",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "The",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "Finals",
+    "why": "kept",
+    "term": "final",
+    "topic": 4,
+    "p": 0.68
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "that",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "you",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "were",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "supposed",
+    "why": "kept",
+    "term": "supposed",
+    "topic": 4,
+    "p": 0.972
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "to",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "be",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "here",
+    "why": "stop word"
+   },
+   {
+    "t": "."
+   },
+   {
+    "t": " … ",
+    "gap": true
+   },
+   {
+    "t": "LeBron",
+    "why": "name word"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "this",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "is",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "the",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "second",
+    "why": "kept",
+    "term": "second",
+    "topic": 4,
+    "p": 0.735
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "straight",
+    "why": "kept",
+    "term": "straight",
+    "topic": 4,
+    "p": 0.695
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "year",
+    "why": "kept",
+    "term": "year",
+    "topic": 4,
+    "p": 0.601
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "you",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "guys",
+    "why": "spoken filler"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "made",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "The",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "Finals",
+    "why": "kept",
+    "term": "final",
+    "topic": 4,
+    "p": 0.68
+   },
+   {
+    "t": "."
+   },
+   {
+    "t": " … ",
+    "gap": true
+   },
+   {
+    "t": "LeBron",
+    "why": "name word"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "city",
+    "why": "kept",
+    "term": "city",
+    "topic": 4,
+    "p": 0.857
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "of",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "Cleveland",
+    "why": "name word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "hasn't",
+    "why": "contraction"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "won",
+    "why": "kept",
+    "term": "won",
+    "topic": 4,
+    "p": 0.863
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "a",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "championship",
+    "why": "kept",
+    "term": "championship",
+    "topic": 4,
+    "p": 0.936
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "in",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "over",
+    "why": "stop word"
+   },
+   {
+    "t": " 50 "
+   },
+   {
+    "t": "years",
+    "why": "kept",
+    "term": "year",
+    "topic": 4,
+    "p": 0.601
+   },
+   {
+    "t": ". "
+   },
+   {
+    "t": "Being",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "from",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "Akron",
+    "why": "min_df"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "how",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "does",
+    "why": "spoken filler"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "it",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "feel",
+    "why": "generic word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "to",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "kind",
+    "why": "spoken filler"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "of",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "have",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "a",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "shot",
+    "why": "kept",
+    "term": "shot",
+    "topic": 9,
+    "p": 0.875
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "to",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "beat",
+    "why": "kept",
+    "term": "beat",
+    "topic": 4,
+    "p": 0.556
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "the",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "drought",
+    "why": "kept",
+    "term": "drought",
+    "topic": 1,
+    "p": 0.512
+   },
+   {
+    "t": "?"
+   },
+   {
+    "t": " … ",
+    "gap": true
+   },
+   {
+    "t": "LeBron",
+    "why": "name word"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "during",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "the",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "regular",
+    "why": "kept",
+    "term": "regular",
+    "topic": 1,
+    "p": 0.771
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "season",
+    "why": "kept",
+    "term": "season",
+    "topic": 1,
+    "p": 0.524
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "you",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "said",
+    "why": "spoken filler"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "your",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "team",
+    "why": "max_df"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "is",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "okay",
+    "why": "spoken filler"
+   },
+   {
+    "t": ", "
+   },
+   {
+    "t": "it's",
+    "why": "under 3 letters"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "not",
+    "why": "stop word"
+   },
+   {
+    "t": " "
+   },
+   {
+    "t": "great",
+    "why": "spoken filler"
+   },
+   {
+    "t": "."
+   }
+  ],
+  "top_terms": [
+   {
+    "term": "year",
+    "n": 8,
+    "topic": 4
+   },
+   {
+    "term": "champagne",
+    "n": 3,
+    "topic": 4
+   },
+   {
+    "term": "final",
+    "n": 3,
+    "topic": 4
+   },
+   {
+    "term": "year year",
+    "n": 2,
+    "topic": 4
+   },
+   {
+    "term": "court",
+    "n": 2,
+    "topic": 4
+   },
+   {
+    "term": "man",
+    "n": 2,
+    "topic": 4
+   },
+   {
+    "term": "straight",
+    "n": 2,
+    "topic": 4
+   },
+   {
+    "term": "sense",
+    "n": 2,
+    "topic": 1
+   },
+   {
+    "term": "fan",
+    "n": 2,
+    "topic": 4
+   },
+   {
+    "term": "win",
+    "n": 1,
+    "topic": 4
+   },
+   {
+    "term": "walked",
+    "n": 1,
+    "topic": 4
+   },
+   {
+    "term": "watching",
+    "n": 1,
+    "topic": 4
+   }
+  ]
+ },
+ "check_max_diff": 1.1102230246251565e-16,
+ "sweep": [
+  {
+   "K": 5,
+   "npmi": 0.1382,
+   "diversity": 0.712,
+   "stability": 0.8076
+  },
+  {
+   "K": 8,
+   "npmi": 0.125,
+   "diversity": 0.585,
+   "stability": 0.765
+  },
+  {
+   "K": 10,
+   "npmi": 0.1341,
+   "diversity": 0.532,
+   "stability": 0.7361
+  },
+  {
+   "K": 12,
+   "npmi": 0.1322,
+   "diversity": 0.5133,
+   "stability": 0.7056
+  },
+  {
+   "K": 15,
+   "npmi": 0.1063,
+   "diversity": 0.4933,
+   "stability": 0.6767
+  },
+  {
+   "K": 20,
+   "npmi": 0.1144,
+   "diversity": 0.47,
+   "stability": 0.6549
+  }
+ ],
+ "alpha": [
+  {
+   "alpha": 0.1,
+   "npmi": 0.134,
+   "diversity": 0.53
+  },
+  {
+   "alpha": 0.5,
+   "npmi": 0.137,
+   "diversity": 0.69
+  },
+  {
+   "alpha": 1.0,
+   "npmi": 0.124,
+   "diversity": 0.76
+  }
+ ],
+ "topic_words": {
+  "topic_1": [
+   "year",
+   "season",
+   "final",
+   "playoff",
+   "experience",
+   "conference",
+   "day",
+   "ago"
+  ],
+  "topic_2": [
+   "half",
+   "second",
+   "second half",
+   "quarter",
+   "tonight",
+   "foul",
+   "turnover",
+   "second quarter"
+  ],
+  "topic_3": [
+   "quarter",
+   "fourth",
+   "fourth quarter",
+   "minute",
+   "run",
+   "shot",
+   "end",
+   "tonight"
+  ],
+  "topic_4": [
+   "year",
+   "final",
+   "win",
+   "championship",
+   "moment",
+   "nba",
+   "player",
+   "career"
+  ],
+  "topic_5": [
+   "night",
+   "defense",
+   "adjustment",
+   "defensively",
+   "need",
+   "ball",
+   "defensive",
+   "offense"
+  ],
+  "topic_6": [
+   "shot",
+   "ball",
+   "throw",
+   "free",
+   "tonight",
+   "free throw",
+   "shooting",
+   "line"
+  ],
+  "topic_7": [
+   "playoff",
+   "challenge",
+   "moment",
+   "defense",
+   "season",
+   "trying",
+   "day",
+   "sense"
+  ],
+  "topic_8": [
+   "final",
+   "player",
+   "nba",
+   "day",
+   "nba final",
+   "experience",
+   "moment",
+   "basketball"
+  ],
+  "topic_9": [
+   "tonight",
+   "win",
+   "minute",
+   "shot",
+   "season",
+   "quarter",
+   "performance",
+   "end"
+  ],
+  "topic_10": [
+   "home",
+   "night",
+   "tomorrow",
+   "court",
+   "year",
+   "win",
+   "home court",
+   "fan"
+  ]
+ }
+}

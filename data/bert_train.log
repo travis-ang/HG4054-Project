@@ -1,0 +1,72 @@
+Step 17 supervised: 720 of 720 uses labelled by the AI agent (training labels)
+
+Agreement, AI agent vs Claude, "I", random (47 uses): 98%, Cohen's kappa 0.96
+Claude    neither  self  team
+AI agent                     
+neither        22     0     0
+self            0    23     1
+team            0     0     1
+Agreement, AI agent vs Claude, "we", random (53 uses): 98%, Cohen's kappa 0.85
+Claude    not_team  team
+AI agent                
+not_team         3     1
+team             0    49
+Agreement, AI agent vs AI agent 2, "I", random (47 uses): 100%, Cohen's kappa 1.00
+AI agent 2  neither  self  team
+AI agent                       
+neither          22     0     0
+self              0    24     0
+team              0     0     1
+Agreement, AI agent vs AI agent 2, "I", targeted (60 uses): 82%, Cohen's kappa 0.65
+AI agent 2  neither  self  team
+AI agent                       
+neither           2     0     1
+self              0    18     9
+team              0     1    29
+Agreement, AI agent vs AI agent 2, "we", random (53 uses): 100%, Cohen's kappa 1.00
+AI agent 2  not_team  team
+AI agent                  
+not_team           4     0
+team               0    49
+Agreement, AI agent vs AI agent 2, "we", targeted (60 uses): 93%, Cohen's kappa 0.81
+AI agent 2  not_team  team
+AI agent                  
+not_team          12     2
+team               2    44
+Agreement, Claude vs AI agent 2, "I", random (47 uses): 98%, Cohen's kappa 0.96
+AI agent 2  neither  self  team
+Claude                         
+neither          22     0     0
+self              0    23     0
+team              0     1     1
+Agreement, Claude vs AI agent 2, "we", random (53 uses): 98%, Cohen's kappa 0.85
+AI agent 2  not_team  team
+Claude                    
+not_team           3     0
+team               1    49
+
+"I" C = 0.01: accuracy 0.817, macro-F1 0.759
+"I" C = 0.1: accuracy 0.833, macro-F1 0.765
+"I" C = 1.0: accuracy 0.844, macro-F1 0.776
+chosen C = 1.0; held-out players: macro-F1 0.776 (all labelled), random part: accuracy 0.897 vs majority class 0.600, macro-F1 0.738  ->  PASSES the bar (macro-F1 >= 0.60 and above majority)
+confusion (rows = training labels, columns = model, held-out):
+         neither  self  team
+neither       96     9     2
+self           6   184    17
+team           1    21    24
+label shares in the random sample (training labels): self 60%, neither 35%, team 5%
+
+all "I" uses labelled by the model: self 59.0%, neither 37.8%, team 3.2%
+
+"we" C = 0.01: accuracy 0.892, macro-F1 0.703
+"we" C = 0.1: accuracy 0.914, macro-F1 0.714
+"we" C = 1.0: accuracy 0.908, macro-F1 0.675
+chosen C = 0.1; held-out players: macro-F1 0.714 (all labelled), random part: accuracy 0.940 vs majority class 0.950, macro-F1 0.684  ->  FAILS the bar (macro-F1 >= 0.60 and above majority)
+confusion (rows = training labels, columns = model, held-out):
+          not_team  team
+not_team        14    15
+team            16   315
+label shares in the random sample (training labels): team 95%, not_team 5%
+
+all "we" uses labelled by the model: team 95.4%, not_team 4.6%
+

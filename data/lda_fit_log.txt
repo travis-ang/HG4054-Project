@@ -1,0 +1,31 @@
+Final model: K = 10, seed 0, alpha = eta = 1/K, batch, 50 iterations
+
+topic (NPMI coherence, stability across seeds): label | top 15 words
+topic_1 (+0.15, 0.80): Season and playoff run | year, season, final, playoff, experience, conference, day, ago, conference final, run, player, group, regular season, regular, start
+topic_2 (+0.17, 0.54): First half: fouls and turnovers | half, second, second half, quarter, tonight, foul, turnover, second quarter, start, happened, early, trouble, room, locker, loss
+topic_3 (+0.19, 0.90): Fourth quarter and closing | quarter, fourth, fourth quarter, minute, run, shot, end, tonight, stretch, late, win, happened, hit, final, year
+topic_4 (+0.17, 0.86): Championship and legacy | year, final, win, championship, moment, nba, player, career, season, title, won, winning, thought, ago, special
+topic_5 (+0.08, 0.87): Tactics and adjustments | night, defense, adjustment, defensively, need, ball, defensive, offense, change, pick, expect, film, playoff, roll, lineup
+topic_6 (+0.17, 0.54): Shooting and free throws | shot, ball, throw, free, tonight, free throw, shooting, line, night, hit, end, second, making, trying, need
+topic_7 (+0.08, 0.54): Pressure and mindset | playoff, challenge, moment, defense, season, trying, day, sense, knowing, try, watching, stay, long, confidence, player
+topic_8 (+0.14, 0.72): The Finals stage | final, player, nba, day, nba final, experience, moment, basketball, coach, room, night, shot, teammate, important, minute
+topic_9 (+0.09, 0.84): Individual performance | tonight, win, minute, shot, season, quarter, performance, end, playoff, mentioned, defense, run, early, today, coach
+topic_10 (+0.11, 0.70): Home court and the series | home, night, tomorrow, court, year, win, home court, fan, need, advantage, day, road, tomorrow night, today, expect
+
+Mean topic share by tier (descriptive; no controls):
+tier                                      role  starter  superstar
+topic_1 Season and playoff run           0.120    0.123      0.125
+topic_2 First half: fouls and turnovers  0.077    0.088      0.091
+topic_3 Fourth quarter and closing       0.059    0.062      0.079
+topic_4 Championship and legacy          0.137    0.097      0.103
+topic_5 Tactics and adjustments          0.142    0.146      0.123
+topic_6 Shooting and free throws         0.101    0.117      0.138
+topic_7 Pressure and mindset             0.069    0.071      0.059
+topic_8 The Finals stage                 0.114    0.094      0.073
+topic_9 Individual performance           0.091    0.116      0.136
+topic_10 Home court and the series       0.090    0.085      0.075
+
+Alpha sensitivity (NPMI coherence, diversity). Same 10 themes at all three values:
+  alpha = 0.100: 0.134, 0.53
+  alpha = 0.500: 0.137, 0.69
+  alpha = 1.000: 0.124, 0.76

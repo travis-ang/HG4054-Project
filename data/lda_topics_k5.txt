@@ -1,0 +1,7 @@
+K = 5 robustness model (seed 0, alpha = eta = 1/K). NPMI coherence 0.138
+
+k5_topic_1 (+0.14): year, final, season, player, nba, playoff, moment, championship, win, experience, career, run, nba final, ago, long
+k5_topic_2 (+0.16): tonight, shot, second, half, quarter, second half, ball, end, minute, defense, foul, early, run, hit, happened
+k5_topic_3 (+0.19): quarter, fourth, fourth quarter, win, tonight, home, minute, throw, free throw, free, end, court, shot, late, stretch
+k5_topic_4 (+0.11): day, win, room, year, locker, locker room, night, tomorrow, final, court, situation, fan, moment, player, term
+k5_topic_5 (+0.08): night, defense, shot, ball, need, defensively, playoff, offense, adjustment, shooting, change, defensive, trying, expect, tomorrow

@@ -1,0 +1,20 @@
+How the LDA works, on one document (Step 22; descriptive; refit matches unit_topics.csv, max diff 1.1e-16)
+
+Corpus: 4,425 documents (one per unit: all reporters' questions to one player in one press conference); 3,263 terms (1,110 two-word phrases); 227,266 term tokens kept of 1,043,235 question words; median 46 per document; 946 name words removed; removed as too common (max_df 0.5): team; matrix density 1.35%.
+
+Example: LeBron James, May 27, 2016 (conference_finals, game day 1, won 1.0); 10 questions, 440 words -> 86 term tokens, 69 distinct terms.
+theta_d: Championship and legacy 66%, Season and playoff run 26%, Individual performance 7%
+Top terms (count, most likely topic): year 8 (t4), champagne 3 (t4), final 3 (t4), year year 2 (t4), court 2 (t4), man 2 (t4), straight 2 (t4), sense 2 (t1), fan 2 (t4), win 1 (t4), walked 1 (t4), watching 1 (t4)
+Excerpt: 18 kept words; removed: stop word 28, under 3 letters 17, spoken filler 7, name word 6, contraction 2, min_df 2, generic word 1, max_df 1
+Kept words and topic (argmax theta_dk * phi_kw): fought->t1 (0.96), idea->t4 (0.90), year->t4 (0.60), final->t4 (0.68), supposed->t4 (0.97), second->t4 (0.73), straight->t4 (0.69), year->t4 (0.60), final->t4 (0.68), city->t4 (0.86), won->t4 (0.86), championship->t4 (0.94), year->t4 (0.60), shot->t9 (0.88), beat->t4 (0.56), drought->t1 (0.51), regular->t1 (0.77), season->t1 (0.52)
+
+K sweep (seed 0 coherence and diversity; stability over seeds 0-2):
+ K  npmi  diversity  stability
+ 5 0.138      0.712      0.808
+ 8 0.125      0.585      0.765
+10 0.134      0.532      0.736
+12 0.132      0.513      0.706
+15 0.106      0.493      0.677
+20 0.114      0.470      0.655
+
+alpha check (K = 10): alpha 0.1: NPMI 0.134, diversity 0.53; alpha 0.5: NPMI 0.137, diversity 0.69; alpha 1.0: NPMI 0.124, diversity 0.76
